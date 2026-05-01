@@ -15,20 +15,19 @@ export interface LoginResponse {
   token_type: string;
 }
 
+/** A single tool invocation entry from extract_tool_trace */
 export interface ToolEntry {
-  tool_name: string;
+  type: "call" | "result";
+  tool: string;
   input?: Record<string, unknown>;
-  output?: unknown;
-  error?: string | null;
-  timestamp?: string;
-  duration_ms?: number;
+  output?: string;
 }
 
 export interface AgentResponse {
   run_id: string;
   status: string;
   response?: string;
-  tool_trace?: ToolEntry[];  // backend key
+  tool_trace?: ToolEntry[];
 }
 
 export interface AgentRunSummary {

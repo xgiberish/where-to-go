@@ -1,7 +1,10 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import Login from "./components/Auth/Login";
 import Signup from "./components/Auth/Signup";
-import ChatInterface from "./components/Chat/ChatInterface";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Destinations from "./pages/Destinations";
+import Planner from "./pages/Planner";
 import { useAuth } from "./hooks/useAuth";
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
@@ -12,13 +15,16 @@ function ProtectedRoute({ children }: { children: React.ReactNode }) {
 export default function App() {
   return (
     <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/destinations" element={<Destinations />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
       <Route
-        path="/"
+        path="/planner"
         element={
           <ProtectedRoute>
-            <ChatInterface />
+            <Planner />
           </ProtectedRoute>
         }
       />

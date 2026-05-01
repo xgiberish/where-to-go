@@ -18,7 +18,7 @@ export default function Login() {
     try {
       const { data } = await api.login(email, password);
       login(data.access_token);
-      navigate("/");
+      navigate("/planner");
     } catch {
       setError("Invalid email or password.");
     } finally {
@@ -27,33 +27,43 @@ export default function Login() {
   };
 
   return (
-    <div className="auth-container">
-      <h1>Where To Go</h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-          autoComplete="email"
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-          autoComplete="current-password"
-        />
-        {error && <p className="error">{error}</p>}
-        <button type="submit" disabled={loading}>
-          {loading ? "Signing in…" : "Sign In"}
-        </button>
-      </form>
-      <p>
-        No account? <Link to="/signup">Sign up</Link>
-      </p>
+    <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center px-4">
+      <Link
+        to="/"
+        className="flex items-center gap-2 mb-8 text-white hover:text-teal-300 transition-colors"
+      >
+        <span className="text-2xl">✈</span>
+        <span className="font-bold text-lg">Where To Go</span>
+      </Link>
+
+      <div className="auth-container w-full" style={{ maxWidth: 400 }}>
+        <h1>Sign In</h1>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            autoComplete="email"
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+            autoComplete="current-password"
+          />
+          {error && <p className="error">{error}</p>}
+          <button type="submit" disabled={loading}>
+            {loading ? "Signing in…" : "Sign In"}
+          </button>
+        </form>
+        <p>
+          No account? <Link to="/signup">Sign up free</Link>
+        </p>
+      </div>
     </div>
   );
 }
