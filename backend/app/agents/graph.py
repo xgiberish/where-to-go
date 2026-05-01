@@ -85,10 +85,18 @@ def build_graph(
     settings: Settings,
 ):
     """Build the two-model LangGraph agent. Called per-request (cheap — Python wiring only)."""
-    if settings.langchain_api_key:
-        os.environ.setdefault("LANGCHAIN_TRACING_V2", "true")
-        os.environ.setdefault("LANGCHAIN_API_KEY", settings.langchain_api_key)
-        os.environ.setdefault("LANGCHAIN_PROJECT", settings.langchain_project)
+    if settings.langsmith_tracing and settings.langsmith_api_key:
+        os.environ["LANGSMITH_TRACING"] = "true"
+        os.environ["LANGSMITH_ENDPOINT"] = settings.langsmith_endpoint
+        os.environ["LANGSMITH_API_KEY"] = settings.langsmith_api_key
+        os.environ["LANGSMITH_PROJECT"] = settings.langsmith_project
+        log.info(
+            "langsmith_tracing_enabled",
+            project=settings.langsmith_project,
+            endpoint=settings.langsmith_endpoint,
+        )
+    else:
+        log.info("langsmith_tracing_disabled")
 
     tools = [
         make_rag_tool(rag_service),

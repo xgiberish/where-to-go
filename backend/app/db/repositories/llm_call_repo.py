@@ -26,7 +26,6 @@ class LLMCallRepository:
         if tier not in {m.value for m in LLMTier}:
             tier = LLMTier.CHEAP.value
 
-        hyp = response.hypothetical_costs
         llm_call = LLMCall(
             agent_run_id=agent_run_id,
             call_type=call_type,
@@ -37,9 +36,11 @@ class LLMCallRepository:
             output_tokens=response.output_tokens,
             total_tokens=response.total_tokens,
             actual_cost_usd=response.actual_cost_usd,
-            hypothetical_claude_haiku_cost=hyp.get("claude_haiku", 0.0),
-            hypothetical_claude_sonnet_cost=hyp.get("claude_sonnet", 0.0),
-            hypothetical_gemini_flash_cost=hyp.get("gemini_flash", 0.0),
+            # Legacy DB columns — kept to avoid a migration; always 0 now that
+            # Claude hypothetical costs have been removed from the cost model.
+            hypothetical_claude_haiku_cost=0.0,
+            hypothetical_claude_sonnet_cost=0.0,
+            hypothetical_gemini_flash_cost=0.0,
             duration_ms=response.duration_ms or None,
         )
         self.db.add(llm_call)

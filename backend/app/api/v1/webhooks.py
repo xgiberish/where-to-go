@@ -1,4 +1,4 @@
-"""User-triggered webhook delivery endpoints."""
+"""User-triggered webhook delivery endpoints. Discord Specific"""
 from datetime import datetime, timezone
 from typing import Annotated, Any
 

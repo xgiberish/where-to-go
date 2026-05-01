@@ -1,5 +1,5 @@
 import time
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from typing import Any, Literal
 
 import structlog
@@ -9,7 +9,10 @@ from openai import AsyncOpenAI
 from tenacity import retry, stop_after_attempt, wait_exponential
 
 from app.core.config import Settings
-from app.services.cost_calculator import calculate_all_hypothetical_costs
+from app.services.cost_calculator import (
+    GEMINI_15_FLASH_INPUT_PRICE,
+    GEMINI_15_FLASH_OUTPUT_PRICE,
+)
 
 log = structlog.get_logger()
 
@@ -29,7 +32,7 @@ class LLMResponse:
     tier: str = "cheap"       # "cheap" | "strong"
     call_type: str = "other"  # LLMCallType value
 
-    # Cost fields
+    # Actual cost is $0 — Groq free-tier is treated as free for this demo
     actual_cost_usd: float = 0.0
 
     # Performance
@@ -37,14 +40,9 @@ class LLMResponse:
 
     # Computed in __post_init__
     total_tokens: int = 0
-    hypothetical_costs: dict = field(default_factory=dict)
 
     def __post_init__(self) -> None:
         self.total_tokens = self.input_tokens + self.output_tokens
-        if not self.hypothetical_costs:
-            self.hypothetical_costs = calculate_all_hypothetical_costs(
-                self.input_tokens, self.output_tokens
-            )
 
 
 class LLMService:
@@ -136,18 +134,6 @@ class LLMService:
 
         input_tokens = api_response.usage.prompt_tokens if api_response.usage else 0
         output_tokens = api_response.usage.completion_tokens if api_response.usage else 0
-        s = self._settings
-
-        if tier == "cheap":
-            actual_cost = (
-                input_tokens / 1_000_000 * s.groq_cheap_input_price
-                + output_tokens / 1_000_000 * s.groq_cheap_output_price
-            )
-        else:
-            actual_cost = (
-                input_tokens / 1_000_000 * s.groq_strong_input_price
-                + output_tokens / 1_000_000 * s.groq_strong_output_price
-            )
 
         log.info(
             "llm_call_complete",
@@ -157,7 +143,7 @@ class LLMService:
             call_type=call_type,
             input_tokens=input_tokens,
             output_tokens=output_tokens,
-            actual_cost_usd=round(actual_cost, 8),
+            actual_cost_usd=0.0,
             is_free_tier=True,
         )
 
@@ -170,7 +156,7 @@ class LLMService:
             is_free_tier=True,
             tier=tier,
             call_type=call_type,
-            actual_cost_usd=round(actual_cost, 8),
+            actual_cost_usd=0.0,
         )
 
     @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=1, max=8))
@@ -199,11 +185,10 @@ class LLMService:
         usage = api_response.usage_metadata
         input_tokens = usage.prompt_token_count if usage else 0
         output_tokens = usage.candidates_token_count if usage else 0
-        s = self._settings
 
         actual_cost = (
-            input_tokens / 1_000_000 * s.gemini_flash_input_price
-            + output_tokens / 1_000_000 * s.gemini_flash_output_price
+            input_tokens / 1_000_000 * GEMINI_15_FLASH_INPUT_PRICE
+            + output_tokens / 1_000_000 * GEMINI_15_FLASH_OUTPUT_PRICE
         )
 
         log.info(

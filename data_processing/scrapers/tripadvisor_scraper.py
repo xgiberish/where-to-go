@@ -1,11 +1,11 @@
 """TripAdvisor destination and review scraper."""
-#Not in use due to TripAvisor scraping policies could not obtain API key
-import asyncio
+
+# Not in use due to TripAvisor scraping policies could not obtain API key - Kept for later upgrade
+
 from typing import Optional
 
 import httpx
 import structlog
-from bs4 import BeautifulSoup
 from tenacity import retry, retry_if_exception_type, stop_after_attempt, wait_exponential
 
 from data_processing.config import get_config

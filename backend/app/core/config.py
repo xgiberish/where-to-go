@@ -42,15 +42,6 @@ class Settings(BaseSettings):
     strong_model: str = "llama-3.3-70b-versatile"  # Groq tier-2: smart
     demo_model: str = "gemini-1.5-flash"            # Gemini tier-3: cost demo
 
-    # Theoretical pricing (per 1M tokens) — Groq free-tier, costs are theoretical
-    groq_cheap_input_price: float = 0.05
-    groq_cheap_output_price: float = 0.08
-    groq_strong_input_price: float = 0.27
-    groq_strong_output_price: float = 0.27
-    # Gemini flash — actual cost
-    gemini_flash_input_price: float = 0.075
-    gemini_flash_output_price: float = 0.30
-
     # Optional fallbacks (not required for core functionality)
     anthropic_api_key: str = ""
     openai_api_key: str = ""
@@ -81,10 +72,11 @@ class Settings(BaseSettings):
     # AviationStack (route search — free 100 req/month: https://aviationstack.com)
     aviationstack_api_key: str = ""
 
-    # LangSmith tracing (optional — set LANGCHAIN_API_KEY to enable)
-    langchain_tracing_v2: bool = False
-    langchain_api_key: str = ""
-    langchain_project: str = "where-to-go"
+    # LangSmith tracing (optional observability — https://smith.langchain.com)
+    langsmith_tracing: bool = False
+    langsmith_endpoint: str = "https://eu.api.smith.langchain.com"
+    langsmith_api_key: str = ""
+    langsmith_project: str = "where-to-go"
 
     # External APIs
     weather_api_key: str = ""

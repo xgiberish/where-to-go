@@ -16,20 +16,25 @@ services:
       timeout: 5s
       retries: 5
 
-  backend:
-    build: ./backend
-    env_file: .env
-    ports:
-      - "8000:8000"
-    depends_on:
-      db:
-        condition: service_healthy
-    volumes:
-      - ./backend:/app
-      - ./ml/models:/app/models:ro
-    environment:
-      - DATABASE_URL=postgresql+asyncpg://postgres:postgres@localhost:5433/where_to_go
-
+backend:
+  build:
+    context: .
+    dockerfile: backend/Dockerfile
+  env_file: .env
+  ports:
+    - "8000:8000"
+  depends_on:
+    db:
+      condition: service_healthy
+  volumes:
+    - ./backend:/app
+    - ./ml/models:/app/models:ro
+    - ./data_processing:/data_processing:ro
+  environment:
+    - DATABASE_URL=postgresql+asyncpg://postgres:postgres@db:5432/where_to_go
+    - ML_MODEL_PATH=/app/models/travel_style_classifier.joblib
+    - PYTHONPATH=/app:/
+    
   frontend:
     build: ./frontend
     ports:

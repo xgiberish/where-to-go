@@ -1,6 +1,6 @@
 import structlog
 from fastapi import APIRouter, Depends
-from langchain_core.messages import AIMessage, HumanMessage
+from langchain_core.messages import HumanMessage
 from typing import Annotated
 
 from app.agents.graph import build_graph, extract_tool_trace
@@ -8,7 +8,8 @@ from app.core.config import Settings, get_settings
 from app.db.repositories.agent_run_repo import AgentRunRepository
 from app.db.repositories.tool_call_repo import ToolCallRepository
 from app.dependencies import CurrentUser, DB, MLServiceDep, RAGServiceDep
-from app.schemas.agent import AgentQuery, AgentResponse, CostBreakdown
+from app.schemas.agent import AgentQuery, AgentResponse
+from app.services.cost_calculator import build_agent_cost_breakdown
 
 log = structlog.get_logger()
 router = APIRouter()
@@ -36,7 +37,7 @@ async def query_agent(
 
         final_message = result["messages"][-1].content
         tool_trace = extract_tool_trace(result["messages"])
-        cost = _build_cost(result["messages"], settings)
+        cost = build_agent_cost_breakdown(result["messages"], settings)
 
         log.info(
             "agent_run_completed",
@@ -63,51 +64,3 @@ async def query_agent(
         await run_repo.fail(run.id, str(exc))
 
         return AgentResponse(run_id=str(run.id), status="failed", response=str(exc))
-
-
-def _build_cost(messages: list, settings: Settings) -> CostBreakdown:
-    """Accumulate per-model token counts from AIMessage metadata and compute Gemini costs."""
-    cheap_in = cheap_out = cheap_calls = 0
-    strong_in = strong_out = strong_calls = 0
-
-    for msg in messages:
-        if not isinstance(msg, AIMessage):
-            continue
-        usage = getattr(msg, "usage_metadata", None) or {}
-        meta = getattr(msg, "response_metadata", None) or {}
-        model_name = meta.get("model_name") or meta.get("model") or ""
-
-        in_tok = usage.get("input_tokens", 0) or 0
-        out_tok = usage.get("output_tokens", 0) or 0
-
-        if settings.strong_model in model_name:
-            strong_in += in_tok
-            strong_out += out_tok
-            strong_calls += 1
-        else:
-            cheap_in += in_tok
-            cheap_out += out_tok
-            cheap_calls += 1
-
-    total_in = cheap_in + strong_in
-    total_out = cheap_out + strong_out
-
-    def _gemini(in_price: float, out_price: float) -> float:
-        return round((total_in * in_price + total_out * out_price) / 1_000_000, 6)
-
-    return CostBreakdown(
-        cheap_model=settings.cheap_model,
-        cheap_calls=cheap_calls,
-        cheap_input_tokens=cheap_in,
-        cheap_output_tokens=cheap_out,
-        strong_model=settings.strong_model,
-        strong_calls=strong_calls,
-        strong_input_tokens=strong_in,
-        strong_output_tokens=strong_out,
-        total_input_tokens=total_in,
-        total_output_tokens=total_out,
-        actual_cost_usd=0.0,
-        gemini_flash_lite_usd=_gemini(0.125, 0.75),
-        gemini_flash_usd=_gemini(0.50, 3.00),
-        gemini_pro_usd=_gemini(2.00, 12.00),
-    )

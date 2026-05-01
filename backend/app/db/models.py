@@ -1,3 +1,4 @@
+#Python SQLAlchemy table definitions
 import uuid
 from datetime import datetime
 from enum import Enum
