@@ -78,11 +78,7 @@ export default function About() {
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl font-extrabold mb-4">
-            How{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-300">
-              Where To Go
-            </span>{" "}
-            Works
+            How Where To Go Works
           </h1>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
             A full AI pipeline that combines retrieval-augmented generation,

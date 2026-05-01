@@ -80,6 +80,18 @@ async def _fetch_routes(destination: str, settings: Settings) -> str:
                 "limit": "5",
             },
         )
+        if resp.status_code == 403:
+            log.warning(
+                "aviation_api_forbidden",
+                destination=destination,
+                note="endpoint not available on current plan",
+            )
+            return (
+                f"Flight route availability from Beirut (BEY) → {destination} ({iata}): "
+                "Live route data is unavailable right now — this endpoint is not included "
+                "in the current API plan. Please verify flights on Google Flights or the "
+                "airline's website before booking."
+            )
         resp.raise_for_status()
         data = resp.json()
 

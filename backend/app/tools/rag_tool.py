@@ -25,12 +25,11 @@ def make_rag_tool(rag_service: RAGService) -> StructuredTool:
                 return "No relevant destination information found for that query."
             lines = [
                 f"Retrieved {len(result.documents)} passages "
-                f"(confidence={result.confidence:.2f}, "
-                f"destinations={result.sources})\n"
+                f"(sources: {', '.join(result.sources)})\n"
             ]
             for doc in result.documents:
                 lines.append(
-                    f"[{doc.destination}] score={doc.score:.3f}:\n{doc.content[:500]}"
+                    f"[{doc.destination}]:\n{doc.content[:500]}"
                 )
             log.info("rag_tool_done", docs=len(result.documents), sources=result.sources)
             return "\n\n".join(lines)

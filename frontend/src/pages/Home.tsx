@@ -43,10 +43,7 @@ export default function Home() {
           </div>
 
           <h1 className="text-5xl sm:text-6xl font-extrabold leading-tight mb-6">
-            Your AI Smart{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-cyan-500">
-              Travel Planner
-            </span>
+            Your AI Smart Travel Planner
           </h1>
 
           <p className="text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">

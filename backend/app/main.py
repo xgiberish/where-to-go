@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.core.config import get_settings
 from app.core.lifespan import lifespan
-from app.api.v1 import auth, agent, history
+from app.api.v1 import auth, agent, history, webhooks
 
 settings = get_settings()
 
@@ -25,6 +25,7 @@ app.add_middleware(
 app.include_router(auth.router, prefix="/api/v1/auth", tags=["auth"])
 app.include_router(agent.router, prefix="/api/v1/agent", tags=["agent"])
 app.include_router(history.router, prefix="/api/v1/history", tags=["history"])
+app.include_router(webhooks.router, prefix="/api/v1/webhooks", tags=["webhooks"])
 
 
 @app.get("/health", tags=["health"])

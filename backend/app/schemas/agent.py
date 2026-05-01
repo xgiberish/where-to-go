@@ -9,26 +9,32 @@ class AgentQuery(BaseModel):
 
 
 class CostBreakdown(BaseModel):
-    """Per-query cost analysis comparing Groq (free) vs paid providers."""
+    """Per-query cost: Groq (free) vs theoretical Gemini paid-tier equivalents."""
 
-    cheap_tier: dict = {
-        "calls": 0,
-        "tokens": 0,
-        "actual_cost": 0.0,
-    }
-    strong_tier: dict = {
-        "calls": 0,
-        "tokens": 0,
-        "actual_cost": 0.0,
-    }
-    total: dict = {
-        "tokens": 0,
-        "actual_cost": 0.0,
-        "vs_claude_haiku": 0.0,
-        "vs_gemini_flash": 0.0,
-        "savings_vs_claude": 0.0,
-        "savings_vs_gemini": 0.0,
-    }
+    # Per-step token counts
+    cheap_model: str = ""
+    cheap_calls: int = 0
+    cheap_input_tokens: int = 0
+    cheap_output_tokens: int = 0
+
+    strong_model: str = ""
+    strong_calls: int = 0
+    strong_input_tokens: int = 0
+    strong_output_tokens: int = 0
+
+    total_input_tokens: int = 0
+    total_output_tokens: int = 0
+
+    # Actual cost on Groq free tier
+    actual_cost_usd: float = 0.0
+
+    # Theoretical cost on Gemini paid tier (April 2026 pricing, ≤200k context)
+    # Flash-Lite: $0.125/1M in, $0.75/1M out
+    # Flash:      $0.50/1M  in, $3.00/1M out
+    # Pro:        $2.00/1M  in, $12.00/1M out
+    gemini_flash_lite_usd: float = 0.0
+    gemini_flash_usd: float = 0.0
+    gemini_pro_usd: float = 0.0
 
 
 class AgentResponse(BaseModel):

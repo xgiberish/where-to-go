@@ -201,66 +201,12 @@ async def test_pipeline_failure_stored_in_db(client: AsyncClient, db_session):
     assert "Groq API down" in run.response
 
 
-# ── Discord webhook integration ───────────────────────────────────────────────
+# ── Discord: agent endpoint never auto-fires webhook ──────────────────────────
 
 @pytest.mark.asyncio
-async def test_discord_webhook_fired_on_completed_run(client: AsyncClient):
-    """send_agent_result_to_discord is called as a background task when run completes."""
-    token = await _get_token(client, "discord_ok@example.com")
-
-    with (
-        patch("app.api.v1.agent.build_graph", return_value=_make_mock_graph()),
-        patch(
-            "app.api.v1.agent.send_agent_result_to_discord",
-            new_callable=AsyncMock,
-        ) as mock_discord,
-    ):
-        resp = await client.post(
-            "/api/v1/agent/query",
-            json={"query": "Beach destination from Lebanon?"},
-            headers={"Authorization": f"Bearer {token}"},
-        )
-
-    assert resp.status_code == 200
-    assert resp.json()["status"] == "completed"
-    mock_discord.assert_called_once()
-    query_arg, response_arg, status_arg = mock_discord.call_args.args[:3]
-    assert query_arg == "Beach destination from Lebanon?"
-    assert response_arg == "Bali is perfect for beaches."
-    assert status_arg == "completed"
-
-
-@pytest.mark.asyncio
-async def test_discord_webhook_fired_on_failed_run(client: AsyncClient):
-    """send_agent_result_to_discord is called with status='failed' when the graph raises."""
-    token = await _get_token(client, "discord_fail@example.com")
-
-    failing_graph = AsyncMock()
-    failing_graph.ainvoke = AsyncMock(side_effect=RuntimeError("Groq API down"))
-
-    with (
-        patch("app.api.v1.agent.build_graph", return_value=failing_graph),
-        patch(
-            "app.api.v1.agent.send_agent_result_to_discord",
-            new_callable=AsyncMock,
-        ) as mock_discord,
-    ):
-        resp = await client.post(
-            "/api/v1/agent/query",
-            json={"query": "Any destination?"},
-            headers={"Authorization": f"Bearer {token}"},
-        )
-
-    assert resp.json()["status"] == "failed"
-    mock_discord.assert_called_once()
-    _, _, status_arg = mock_discord.call_args.args[:3]
-    assert status_arg == "failed"
-
-
-@pytest.mark.asyncio
-async def test_discord_webhook_skipped_when_url_missing(client: AsyncClient):
-    """When DISCORD_WEBHOOK_URL is not set, send_webhook is never called."""
-    token = await _get_token(client, "discord_skip@example.com")
+async def test_agent_does_not_auto_fire_discord_on_completed_run(client: AsyncClient):
+    """Discord webhook is NOT sent automatically when a run completes (user-triggered only)."""
+    token = await _get_token(client, "no_discord_ok@example.com")
 
     with (
         patch("app.api.v1.agent.build_graph", return_value=_make_mock_graph()),
@@ -275,31 +221,31 @@ async def test_discord_webhook_skipped_when_url_missing(client: AsyncClient):
             headers={"Authorization": f"Bearer {token}"},
         )
 
-    # Route still succeeds and send_webhook is never touched (URL is None in test settings)
     assert resp.status_code == 200
+    assert resp.json()["status"] == "completed"
     mock_send.assert_not_called()
 
 
 @pytest.mark.asyncio
-async def test_discord_webhook_receives_tool_trace(client: AsyncClient):
-    """The tool_trace list is forwarded to send_agent_result_to_discord on completion."""
-    token = await _get_token(client, "discord_trace@example.com")
+async def test_agent_does_not_auto_fire_discord_on_failed_run(client: AsyncClient):
+    """Discord webhook is NOT sent automatically when a run fails."""
+    token = await _get_token(client, "no_discord_fail@example.com")
+
+    failing_graph = AsyncMock()
+    failing_graph.ainvoke = AsyncMock(side_effect=RuntimeError("Groq API down"))
 
     with (
-        patch("app.api.v1.agent.build_graph", return_value=_make_mock_graph()),
+        patch("app.api.v1.agent.build_graph", return_value=failing_graph),
         patch(
-            "app.api.v1.agent.send_agent_result_to_discord",
+            "app.services.discord_service.send_webhook",
             new_callable=AsyncMock,
-        ) as mock_discord,
+        ) as mock_send,
     ):
-        await client.post(
+        resp = await client.post(
             "/api/v1/agent/query",
-            json={"query": "Beach from Lebanon?"},
+            json={"query": "Any destination?"},
             headers={"Authorization": f"Bearer {token}"},
         )
 
-    tool_trace_arg = mock_discord.call_args.args[3]
-    assert isinstance(tool_trace_arg, list)
-    call_entries = [t for t in tool_trace_arg if t["type"] == "call"]
-    assert len(call_entries) == 1
-    assert call_entries[0]["tool"] == "rag_search"
+    assert resp.json()["status"] == "failed"
+    mock_send.assert_not_called()

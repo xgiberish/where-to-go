@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import TripPlanCard from "../components/TripPlanCard";
 import { api } from "../services/api";
-import type { ToolEntry } from "../services/api";
+import type { CostBreakdown, ToolEntry } from "../services/api";
 import { useAuth } from "../hooks/useAuth";
 
 // ── Types ─────────────────────────────────────────────────────────────────────
@@ -12,9 +12,11 @@ interface Message {
   id: string;
   role: "user" | "assistant";
   content: string;
+  query?: string;
   status?: "completed" | "failed";
   trace?: ToolEntry[];
   runId?: string;
+  costAnalysis?: CostBreakdown;
   pending?: boolean;
 }
 
@@ -26,7 +28,7 @@ const PROGRESS_STEPS = [
   "Checking travel style fit",
   "Checking weather & flights",
   "Preparing final plan",
-  "Sending Discord notification",
+  "Finalising recommendation",
 ];
 
 const CHIPS = [
@@ -210,9 +212,11 @@ export default function Planner() {
           id: assistantMsgId,
           role: "assistant",
           content: data.response ?? "No response returned.",
+          query,
           status: data.status as "completed" | "failed",
           trace: data.tool_trace,
           runId: data.run_id,
+          costAnalysis: data.cost_analysis,
         },
       ]);
     } catch {
@@ -276,10 +280,12 @@ export default function Planner() {
                 ) : (
                   <div className="max-w-[90%] w-full">
                     <TripPlanCard
+                      query={m.query ?? ""}
                       content={m.content}
                       trace={m.trace}
                       runId={m.runId}
                       status={m.status ?? "completed"}
+                      costAnalysis={m.costAnalysis}
                     />
                   </div>
                 )}

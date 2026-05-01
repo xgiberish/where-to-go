@@ -28,6 +28,7 @@ export interface AgentResponse {
   status: string;
   response?: string;
   tool_trace?: ToolEntry[];
+  cost_analysis?: CostBreakdown;
 }
 
 export interface AgentRunSummary {
@@ -35,6 +36,28 @@ export interface AgentRunSummary {
   query: string;
   status: string;
   created_at: string;
+}
+
+export interface CostBreakdown {
+  cheap_model: string;
+  cheap_calls: number;
+  cheap_input_tokens: number;
+  cheap_output_tokens: number;
+  strong_model: string;
+  strong_calls: number;
+  strong_input_tokens: number;
+  strong_output_tokens: number;
+  total_input_tokens: number;
+  total_output_tokens: number;
+  actual_cost_usd: number;
+  gemini_flash_lite_usd: number;
+  gemini_flash_usd: number;
+  gemini_pro_usd: number;
+}
+
+export interface DiscordSendResponse {
+  success: boolean;
+  message: string;
 }
 
 export const api = {
@@ -52,4 +75,17 @@ export const api = {
     client.post<AgentResponse>("/agent/query", { query }),
 
   getHistory: () => client.get<AgentRunSummary[]>("/history/"),
+
+  sendToDiscord: (
+    query: string,
+    response: string,
+    status: string,
+    tool_trace?: ToolEntry[],
+  ) =>
+    client.post<DiscordSendResponse>("/webhooks/discord/send-plan", {
+      query,
+      response,
+      status,
+      tool_trace,
+    }),
 };

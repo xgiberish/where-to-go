@@ -174,10 +174,7 @@ export default function Destinations() {
         {/* Header */}
         <div className="text-center mb-10">
           <h1 className="text-4xl font-extrabold mb-3">
-            East &amp; Southeast{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-300">
-              Asia Destinations
-            </span>
+            East &amp; Southeast Asia Destinations
           </h1>
           <p className="text-slate-400 text-lg max-w-xl mx-auto">
             12 handpicked destinations our AI knows in depth — each with
