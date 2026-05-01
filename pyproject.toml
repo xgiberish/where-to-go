@@ -1,0 +1,11 @@
+[project]
+name = "where-to-go"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "langchain-groq>=0.2.0",
+    "pgvector>=0.4.2",
+    "pydantic[email]>=2.13.3",
+]

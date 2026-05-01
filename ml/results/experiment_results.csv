@@ -1,0 +1,5 @@
+timestamp,model,params,cv_folds,accuracy_mean,accuracy_std,f1_macro_mean,f1_macro_std,fit_time_s,notes
+2026-04-30T19:29:13.915762+00:00,random_forest,default,2x10,0.965,0.0181,0.7742,0.0648,0.101,initial_comparison
+2026-04-30T19:29:14.803135+00:00,logistic_regression,default,2x10,0.9547,0.0243,0.7511,0.0616,0.009,initial_comparison
+2026-04-30T19:29:15.015122+00:00,hist_gradient_boosting,default,2x10,0.5634,0.0332,0.3103,0.0382,0.148,initial_comparison
+2026-04-30T19:29:18.350453+00:00,random_forest_tuned,"{'clf__max_depth': None, 'clf__min_samples_split': 5, 'clf__n_estimators': 100}",2x10,N/A,N/A,0.7872,N/A,N/A,grid_search_tuned

@@ -1,0 +1,66 @@
+Collecting langchain-groq
+  Downloading langchain_groq-1.1.2-py3-none-any.whl.metadata (2.4 kB)
+Collecting groq<1.0.0,>=0.30.0 (from langchain-groq)
+  Downloading groq-0.37.1-py3-none-any.whl.metadata (16 kB)
+Collecting langchain-core<2.0.0,>=1.2.8 (from langchain-groq)
+  Downloading langchain_core-1.3.2-py3-none-any.whl.metadata (4.4 kB)
+Requirement already satisfied: anyio<5,>=3.5.0 in c:\users\legion\appdata\local\programs\python\python312\lib\site-packages (from groq<1.0.0,>=0.30.0->langchain-groq) (4.13.0)
+Requirement already satisfied: distro<2,>=1.7.0 in c:\users\legion\appdata\local\programs\python\python312\lib\site-packages (from groq<1.0.0,>=0.30.0->langchain-groq) (1.9.0)
+Requirement already satisfied: httpx<1,>=0.23.0 in c:\users\legion\appdata\local\programs\python\python312\lib\site-packages (from groq<1.0.0,>=0.30.0->langchain-groq) (0.28.1)
+Requirement already satisfied: pydantic<3,>=1.9.0 in c:\users\legion\appdata\local\programs\python\python312\lib\site-packages (from groq<1.0.0,>=0.30.0->langchain-groq) (2.13.3)
+Requirement already satisfied: sniffio in c:\users\legion\appdata\local\programs\python\python312\lib\site-packages (from groq<1.0.0,>=0.30.0->langchain-groq) (1.3.1)
+Requirement already satisfied: typing-extensions<5,>=4.10 in c:\users\legion\appdata\local\programs\python\python312\lib\site-packages (from groq<1.0.0,>=0.30.0->langchain-groq) (4.15.0)
+Collecting jsonpatch<2.0.0,>=1.33.0 (from langchain-core<2.0.0,>=1.2.8->langchain-groq)
+  Downloading jsonpatch-1.33-py2.py3-none-any.whl.metadata (3.0 kB)
+Collecting langchain-protocol>=0.0.10 (from langchain-core<2.0.0,>=1.2.8->langchain-groq)
+  Downloading langchain_protocol-0.0.14-py3-none-any.whl.metadata (2.4 kB)
+Collecting langsmith<1.0.0,>=0.3.45 (from langchain-core<2.0.0,>=1.2.8->langchain-groq)
+  Downloading langsmith-0.7.38-py3-none-any.whl.metadata (15 kB)
+Requirement already satisfied: packaging>=23.2.0 in c:\users\legion\appdata\local\programs\python\python312\lib\site-packages (from langchain-core<2.0.0,>=1.2.8->langchain-groq) (26.1)
+Requirement already satisfied: pyyaml<7.0.0,>=5.3.0 in c:\users\legion\appdata\local\programs\python\python312\lib\site-packages (from langchain-core<2.0.0,>=1.2.8->langchain-groq) (6.0.3)
+Requirement already satisfied: tenacity!=8.4.0,<10.0.0,>=8.1.0 in c:\users\legion\appdata\local\programs\python\python312\lib\site-packages (from langchain-core<2.0.0,>=1.2.8->langchain-groq) (9.1.4)
+Collecting uuid-utils<1.0,>=0.12.0 (from langchain-core<2.0.0,>=1.2.8->langchain-groq)
+  Downloading uuid_utils-0.14.1-cp39-abi3-win_amd64.whl.metadata (4.9 kB)
+Requirement already satisfied: idna>=2.8 in c:\users\legion\appdata\local\programs\python\python312\lib\site-packages (from anyio<5,>=3.5.0->groq<1.0.0,>=0.30.0->langchain-groq) (3.13)
+Requirement already satisfied: certifi in c:\users\legion\appdata\local\programs\python\python312\lib\site-packages (from httpx<1,>=0.23.0->groq<1.0.0,>=0.30.0->langchain-groq) (2026.4.22)
+Requirement already satisfied: httpcore==1.* in c:\users\legion\appdata\local\programs\python\python312\lib\site-packages (from httpx<1,>=0.23.0->groq<1.0.0,>=0.30.0->langchain-groq) (1.0.9)
+Requirement already satisfied: h11>=0.16 in c:\users\legion\appdata\local\programs\python\python312\lib\site-packages (from httpcore==1.*->httpx<1,>=0.23.0->groq<1.0.0,>=0.30.0->langchain-groq) (0.16.0)
+Collecting jsonpointer>=1.9 (from jsonpatch<2.0.0,>=1.33.0->langchain-core<2.0.0,>=1.2.8->langchain-groq)
+  Using cached jsonpointer-3.1.1-py3-none-any.whl.metadata (2.4 kB)
+Collecting orjson>=3.9.14 (from langsmith<1.0.0,>=0.3.45->langchain-core<2.0.0,>=1.2.8->langchain-groq)
+  Downloading orjson-3.11.8-cp312-cp312-win_amd64.whl.metadata (43 kB)
+     -------------------------------------- 43.1/43.1 kB 349.3 kB/s eta 0:00:00
+Collecting requests-toolbelt>=1.0.0 (from langsmith<1.0.0,>=0.3.45->langchain-core<2.0.0,>=1.2.8->langchain-groq)
+  Using cached requests_toolbelt-1.0.0-py2.py3-none-any.whl.metadata (14 kB)
+Requirement already satisfied: requests>=2.0.0 in c:\users\legion\appdata\local\programs\python\python312\lib\site-packages (from langsmith<1.0.0,>=0.3.45->langchain-core<2.0.0,>=1.2.8->langchain-groq) (2.33.1)
+Collecting xxhash>=3.0.0 (from langsmith<1.0.0,>=0.3.45->langchain-core<2.0.0,>=1.2.8->langchain-groq)
+  Downloading xxhash-3.7.0-cp312-cp312-win_amd64.whl.metadata (13 kB)
+Collecting zstandard>=0.23.0 (from langsmith<1.0.0,>=0.3.45->langchain-core<2.0.0,>=1.2.8->langchain-groq)
+  Using cached zstandard-0.25.0-cp312-cp312-win_amd64.whl.metadata (3.3 kB)
+Requirement already satisfied: annotated-types>=0.6.0 in c:\users\legion\appdata\local\programs\python\python312\lib\site-packages (from pydantic<3,>=1.9.0->groq<1.0.0,>=0.30.0->langchain-groq) (0.7.0)
+Requirement already satisfied: pydantic-core==2.46.3 in c:\users\legion\appdata\local\programs\python\python312\lib\site-packages (from pydantic<3,>=1.9.0->groq<1.0.0,>=0.30.0->langchain-groq) (2.46.3)
+Requirement already satisfied: typing-inspection>=0.4.2 in c:\users\legion\appdata\local\programs\python\python312\lib\site-packages (from pydantic<3,>=1.9.0->groq<1.0.0,>=0.30.0->langchain-groq) (0.4.2)
+Requirement already satisfied: charset_normalizer<4,>=2 in c:\users\legion\appdata\local\programs\python\python312\lib\site-packages (from requests>=2.0.0->langsmith<1.0.0,>=0.3.45->langchain-core<2.0.0,>=1.2.8->langchain-groq) (3.4.7)
+Requirement already satisfied: urllib3<3,>=1.26 in c:\users\legion\appdata\local\programs\python\python312\lib\site-packages (from requests>=2.0.0->langsmith<1.0.0,>=0.3.45->langchain-core<2.0.0,>=1.2.8->langchain-groq) (2.6.3)
+Downloading langchain_groq-1.1.2-py3-none-any.whl (19 kB)
+Downloading groq-0.37.1-py3-none-any.whl (137 kB)
+   -------------------------------------- 137.5/137.5 kB 313.4 kB/s eta 0:00:00
+Downloading langchain_core-1.3.2-py3-none-any.whl (542 kB)
+   -------------------------------------- 542.4/542.4 kB 286.3 kB/s eta 0:00:00
+Downloading jsonpatch-1.33-py2.py3-none-any.whl (12 kB)
+Downloading langchain_protocol-0.0.14-py3-none-any.whl (7.0 kB)
+Downloading langsmith-0.7.38-py3-none-any.whl (392 kB)
+   -------------------------------------- 392.3/392.3 kB 280.9 kB/s eta 0:00:00
+Downloading uuid_utils-0.14.1-cp39-abi3-win_amd64.whl (187 kB)
+   -------------------------------------- 187.1/187.1 kB 595.6 kB/s eta 0:00:00
+Using cached jsonpointer-3.1.1-py3-none-any.whl (7.7 kB)
+Downloading orjson-3.11.8-cp312-cp312-win_amd64.whl (127 kB)
+   -------------------------------------- 127.4/127.4 kB 577.3 kB/s eta 0:00:00
+Using cached requests_toolbelt-1.0.0-py2.py3-none-any.whl (54 kB)
+Downloading xxhash-3.7.0-cp312-cp312-win_amd64.whl (31 kB)
+Using cached zstandard-0.25.0-cp312-cp312-win_amd64.whl (506 kB)
+Installing collected packages: zstandard, xxhash, uuid-utils, orjson, langchain-protocol, jsonpointer, requests-toolbelt, jsonpatch, langsmith, groq, langchain-core, langchain-groq
+Successfully installed groq-0.37.1 jsonpatch-1.33 jsonpointer-3.1.1 langchain-core-1.3.2 langchain-groq-1.1.2 langchain-protocol-0.0.14 langsmith-0.7.38 orjson-3.11.8 requests-toolbelt-1.0.0 uuid-utils-0.14.1 xxhash-3.7.0 zstandard-0.25.0
+
+[notice] A new release of pip is available: 24.0 -> 26.0.1
+[notice] To update, run: C:\Users\LEGION\AppData\Local\Programs\Python\Python312\python.exe -m pip install --upgrade pip

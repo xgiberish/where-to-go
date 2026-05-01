@@ -1,0 +1,6 @@
+timestamp,query,top_k,top_1_dest,top_1_score,top_2_dest,top_2_score,top_3_dest,top_3_score,confidence,relevant,notes
+2026-04-30T20:22:28.001951+00:00,hiking adventure,5,Pokhara,0.5111,Boracay,0.5085,Pokhara,0.4382,0.4605,true,
+2026-04-30T20:22:28.001951+00:00,quiet beach destinations,5,Penang,0.5536,Boracay,0.5506,Boracay,0.5383,0.5263,true,
+2026-04-30T20:22:28.001951+00:00,cultural cities,5,Kyoto,0.5143,Tokyo,0.4882,Kyoto,0.4599,0.4634,true,
+2026-04-30T20:22:28.001951+00:00,budget travel southeast asia,5,Siem Reap,0.5776,Chiang Mai,0.5761,Siem Reap,0.568,0.5556,true,
+2026-04-30T20:22:28.001951+00:00,budget beaches,5,Boracay,0.5833,Boracay,0.5693,Boracay,0.5528,0.5603,true,

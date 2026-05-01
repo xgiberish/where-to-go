@@ -1,0 +1,148 @@
+destination_name,country,climate,avg_temp,cost_index,safety_score,tourism_density,activities,num_reviews,best_season,tags,budget_tier,travel_style,keyword_label,secondary_styles,labeling_confidence
+Bangkok,Thailand,tropical,28.0,3,5,4,"shopping,nightlife,food,temples,beaches",40,Nov-Feb,"temple,culture,palace,market,street-food,history,shrine,heritage",budget,culture,culture,"family,budget",low
+Chiang Mai,Thailand,tropical,26.0,4,5,4,"shopping,cycling,museums,food,temples",40,Nov-Apr,"temple,trekking,culture,elephant,tradition,mountain,heritage,night-bazaar",budget,culture,culture,"family,adventure",low
+Phuket,Thailand,tropical,28.0,4,2,3,"beaches,diving,shopping,surfing,cycling",40,Nov-Apr,"beach,resort,diving,snorkeling,spa,pool,sunset,island",mid,relaxation,adventure,relaxation,low
+Krabi,Thailand,tropical,28.0,7,7,3,beaches,1,Nov-Apr,"climbing,kayaking,diving,beach,limestone,adventure,rock-climbing",mid,adventure,budget,,low
+Koh Samui,Thailand,tropical,28.0,5,4,3,"beaches,nightlife,diving,cycling,shopping",37,Dec-Apr,"beach,spa,resort,pool,yoga,massage,tranquil,sunset",mid,relaxation,culture,"relaxation,family",low
+Pattaya,Thailand,tropical,28.0,4,6,4,"beaches,shopping,cycling,nightlife,wildlife",40,Nov-Apr,"budget,affordable,beach,backpacking,hostel,cheap,nightlife",budget,budget,family,"budget,culture",low
+Ayutthaya,Thailand,tropical,28.0,3,8,4,"temples,shopping,food,cycling,museums",40,Nov-Feb,"ancient,ruins,temple,UNESCO,history,monument,heritage,palace,shrine",budget,culture,culture,"family,budget",low
+Koh Tao,Thailand,tropical,28.0,4,9,2,"diving,beaches,shopping,nightlife,food",40,Apr-Oct,"diving,snorkeling,scuba,beach,coral,adventure,surfing",budget,adventure,adventure,"relaxation,luxury",low
+Pai,Thailand,highland,22.0,4,9,4,"food,shopping,nightlife,cycling,hiking",29,Nov-Mar,"yoga,meditation,peaceful,hot-springs,mountain,tranquil,zen,retreat,serene",budget,relaxation,budget,,low
+Chiang Rai,Thailand,tropical,25.0,3,10,4,"shopping,food,temples,nightlife,cycling",40,Nov-Apr,"temple,culture,trekking,hill-tribes,heritage,ancient,shrine",budget,culture,culture,"relaxation,family",low
+Hua Hin,Thailand,tropical,28.0,4,10,4,"shopping,beaches,food,cycling,nightlife",40,Nov-Apr,"family,beach,safe,kids,children,resort,park,family-friendly",mid,family,relaxation,"culture,family",low
+Koh Phi Phi,Thailand,tropical,28.0,4,10,3,"beaches,diving,shopping,food,nightlife",40,Nov-Apr,"diving,beach,snorkeling,kayaking,limestone,adventure,cliff",mid,adventure,adventure,"relaxation,family",low
+Railay Beach,Thailand,tropical,28.0,4,2,3,"beaches,climbing,food,nightlife,diving",27,Nov-Apr,"climbing,rock-climbing,beach,kayaking,isolated,adventure,limestone",mid,adventure,budget,,low
+Kanchanaburi,Thailand,tropical,28.0,4,10,4,"wildlife,shopping,food,cycling,temples",40,Nov-Feb,"history,heritage,ancient,rafting,culture,monument,war,traditional",budget,culture,culture,"relaxation,family",low
+Sukhothai,Thailand,tropical,28.0,4,10,3,"temples,shopping,food,cycling,museums",34,Nov-Feb,"ancient,ruins,UNESCO,history,temple,heritage,monument,palace",budget,culture,culture,"family,budget",low
+Koh Lanta,Thailand,tropical,28.0,5,9,4,"beaches,food,shopping,nightlife,diving",40,Nov-Apr,"beach,peaceful,quiet,serene,sunset,tranquil,yoga,spa",budget,relaxation,relaxation,"culture,family",low
+Khao Yai,Thailand,tropical,25.0,5,6,3,"shopping,food,wildlife,hiking,cycling",19,Nov-Feb,"wildlife,safari,trekking,hiking,adventure,national-park,elephant",mid,adventure,budget,,low
+Phang Nga,Thailand,tropical,28.0,3,10,4,"beaches,diving,temples,shopping,food",23,Nov-Apr,"kayaking,caves,limestone,adventure,mangrove,cliff,surfing",mid,adventure,budget,,low
+Samui Luxury,Thailand,tropical,28.0,6,7,3,,50,Dec-Apr,"luxury,villa,resort,spa,fine-dining,exclusive,private,upscale,5-star",luxury,luxury,luxury,relaxation,medium
+Chiang Dao,Thailand,highland,22.0,4,10,3,"food,cycling,shopping,hiking,wildlife",15,Nov-Mar,"trekking,hiking,mountain,cave,adventure,wildlife,climbing",budget,adventure,budget,,low
+Hanoi,Vietnam,subtropical,23.0,3,5,3,"museums,temples,shopping,cycling,climbing",40,Oct-Apr,"temple,culture,history,heritage,ancient,museum,traditional,colonial,shrine,monument",budget,culture,culture,"family,adventure",low
+Ho Chi Minh City,Vietnam,tropical,27.0,4,6,4,"shopping,cycling,museums,temples,food",40,Dec-Apr,"history,museum,culture,heritage,colonial,market,traditional,monument",budget,culture,culture,"family,budget",low
+Hoi An,Vietnam,tropical,26.0,3,10,4,"shopping,cycling,food,beaches,museums",40,Feb-Jul,"ancient,UNESCO,heritage,culture,architecture,traditional,art,lanterns",mid,culture,culture,"family,budget",low
+Ha Long Bay,Vietnam,subtropical,23.0,7,10,4,"beaches,kayaking",15,Mar-Nov,"kayaking,diving,climbing,adventure,cave,limestone,expedition,snorkeling",mid,adventure,budget,,low
+Da Nang,Vietnam,tropical,27.0,4,6,4,"cycling,shopping,beaches,food,wildlife",40,Mar-Sep,"beach,resort,spa,swimming,pool,sunset,relaxing,calm",mid,relaxation,culture,"adventure,family",low
+Hue,Vietnam,subtropical,25.0,3,9,4,"food,cycling,shopping,nightlife,temples",39,Mar-Aug,"imperial,palace,temple,museum,heritage,cultural,ancient,history,monument,shrine",budget,culture,culture,"family,relaxation",low
+Sa Pa,Vietnam,highland,18.0,4,8,4,"shopping,food,hiking,cycling,nightlife",31,Mar-May,"trekking,hiking,mountain,climbing,expedition,adventure,rice-terrace",budget,adventure,adventure,"family,culture",low
+Phu Quoc,Vietnam,tropical,27.0,4,10,3,"beaches,diving,food,shopping,cycling",24,Nov-Apr,"beach,resort,spa,luxury,villa,private,sunset,paradise,pool,tranquil",luxury,relaxation,budget,,low
+Dalat,Vietnam,highland,17.0,4,10,4,"shopping,cycling,nightlife,temples,food",21,Nov-Apr,"peaceful,garden,waterfall,quiet,serene,cool,calm,retreat,tranquil",budget,relaxation,budget,,low
+Ninh Binh,Vietnam,subtropical,24.0,5,6,3,"cycling,temples,food,shopping,museums",32,Sep-Dec,"kayaking,cave,trekking,hiking,adventure,boat,cycling,expedition",budget,adventure,culture,"family,budget",low
+Nha Trang,Vietnam,tropical,27.0,4,9,4,"beaches,shopping,food,cycling,nightlife",40,Feb-Sep,"beach,diving,snorkeling,resort,spa,pool,sunset,relaxing,island",mid,relaxation,relaxation,"family,culture",low
+Mui Ne,Vietnam,tropical,27.0,4,6,4,"beaches,surfing,shopping,cycling,food",26,Nov-Apr,"surfing,adventure,sand-dune,kite-surfing,beach,kayaking,hiking",budget,adventure,budget,,low
+Mekong Delta,Vietnam,tropical,27.0,5,6,3,"cycling,beaches,shopping,diving",17,Dec-Apr,"culture,traditional,heritage,boat,crafts,museum,market,ancient",budget,culture,budget,,low
+Hoa Lu,Vietnam,subtropical,24.0,2,7,3,,1,Oct-Apr,"ancient,temple,history,heritage,monument,cultural,ruins,shrine,palace",budget,culture,budget,,low
+Con Dao,Vietnam,tropical,27.0,4,7,3,"diving,beaches,shopping,cycling,food",25,Nov-Apr,"beach,paradise,peaceful,pristine,resort,private,tranquil,quiet,serene",luxury,relaxation,budget,,low
+Bali Ubud,Indonesia,tropical,26.0,1,7,3,"temples,yoga",50,Apr-Oct,"temple,culture,traditional,heritage,art,yoga,meditation,cultural,shrine,palace",mid,culture,culture,,medium
+Bali Seminyak,Indonesia,tropical,27.0,6,7,3,beaches,50,Apr-Oct,"luxury,villa,resort,fine-dining,exclusive,private,upscale,beach,spa,5-star",luxury,luxury,luxury,relaxation,medium
+Bali Kuta,Indonesia,tropical,27.0,2,7,3,"surfing,beaches",50,Apr-Oct,"surfing,budget,backpacking,affordable,cheap,hostel,beach,inexpensive",budget,budget,budget,,medium
+Yogyakarta,Indonesia,tropical,26.0,3,5,4,"shopping,museums,cycling,nightlife,temples",40,Apr-Oct,"UNESCO,ancient,temple,heritage,culture,traditional,monument,palace,ruins,history",budget,culture,culture,,low
+Lombok,Indonesia,tropical,27.0,6,8,3,"shopping,nightlife,cycling,beaches,food",40,May-Sep,"trekking,hiking,mountain,diving,surfing,adventure,climbing,expedition",mid,adventure,culture,"luxury,relaxation",low
+Komodo Island,Indonesia,tropical,28.0,3,5,3,"diving,kayaking,beaches,shopping,food",21,Apr-Aug,"diving,snorkeling,trekking,wildlife,adventure,expedition,hiking,kayaking",mid,adventure,budget,,low
+Raja Ampat,Indonesia,tropical,27.0,7,6,3,"diving,beaches,shopping,hiking",26,Oct-Apr,"diving,snorkeling,adventure,expedition,wildlife,remote,kayaking",luxury,adventure,budget,,low
+Gili Islands,Indonesia,tropical,27.0,4,7,4,"diving,shopping,beaches,nightlife,food",40,Apr-Aug,"beach,snorkeling,diving,tranquil,peaceful,sunset,paradise,calm,resort",mid,relaxation,adventure,"relaxation,luxury",low
+Nusa Penida,Indonesia,tropical,27.0,3,7,2,"beaches,diving,temples,shopping,food",30,Apr-Oct,"diving,snorkeling,cliff,adventure,hiking,kayaking,beach,wildlife",mid,adventure,adventure,"culture,relaxation",low
+Jakarta,Indonesia,tropical,27.0,3,8,4,"shopping,cycling,nightlife",40,Jun-Sep,"museum,culture,history,heritage,traditional,colonial,market,art,architecture",budget,culture,culture,,low
+Tana Toraja,Indonesia,highland,22.0,6,3,4,"food,shopping,cycling",28,Jul-Sep,"traditional,culture,heritage,ceremony,ancient,cultural,monument,art",mid,culture,budget,,low
+Lake Toba Sumatra,Indonesia,highland,22.0,1,7,2,yoga,50,Jun-Sep,"lake,peaceful,calm,quiet,serene,tranquil,culture,yoga,retreat",budget,relaxation,relaxation,culture,medium
+Flores,Indonesia,tropical,27.0,1,7,3,"hiking,climbing,diving,wildlife",50,Apr-Oct,"trekking,hiking,adventure,diving,expedition,climbing,mountain,wildlife",budget,adventure,adventure,,medium
+Amed Bali,Indonesia,tropical,28.0,1,7,3,"diving,kayaking,beaches",50,Apr-Oct,"diving,snorkeling,adventure,beach,coral,expedition,kayaking",budget,adventure,adventure,,medium
+Bromo Java,Indonesia,highland,15.0,1,7,3,"hiking,climbing",50,Apr-Sep,"volcano,trekking,hiking,adventure,sunrise,expedition,climbing,mountain",mid,adventure,adventure,,medium
+Bandung,Indonesia,highland,22.0,4,8,4,"shopping,museums,nightlife,cycling,food",40,May-Sep,"budget,affordable,cheap,hostel,shopping,backpacking,inexpensive,value",budget,budget,culture,"family,adventure",low
+Bintan,Indonesia,tropical,27.0,4,10,2,"beaches,shopping,nightlife,food",20,Jun-Sep,"resort,luxury,spa,villa,private,exclusive,beach,fine-dining,upscale,5-star",luxury,luxury,budget,,low
+Bogor,Indonesia,tropical,25.0,4,8,4,"nightlife,food,shopping,wildlife,yoga",37,Jun-Sep,"family,park,kids,children,educational,garden,zoo,safe,family-friendly",budget,family,culture,"family,relaxation",low
+Belitung,Indonesia,tropical,27.0,4,8,3,"beaches,shopping,food,diving,nightlife",24,Apr-Oct,"beach,peaceful,pristine,quiet,serene,tranquil,paradise,sunset,calm",mid,relaxation,budget,,low
+Tokyo,Japan,temperate,16.0,4,7,4,"cycling,shopping,nightlife,temples,food",40,"Mar-May,Sep-Nov","temple,culture,museum,heritage,architecture,traditional,art,palace,shrine,history",luxury,culture,culture,"luxury,family",low
+Kyoto,Japan,temperate,15.0,5,10,4,"cycling,temples,shopping,yoga,nightlife",40,"Mar-May,Oct-Nov","temple,shrine,UNESCO,culture,heritage,traditional,ancient,history,palace,monument,geisha",mid,culture,culture,"family,luxury",low
+Osaka,Japan,temperate,16.0,5,5,4,"shopping,cycling,nightlife,food,museums",40,"Mar-May,Sep-Nov","culture,history,museum,castle,architecture,street-food,heritage,traditional,affordable",budget,culture,culture,"family,relaxation",low
+Hiroshima,Japan,temperate,16.0,2,10,4,"food,shopping,museums,temples,nightlife",40,"Apr-May,Oct","peace,history,monument,UNESCO,heritage,museum,cultural,ancient,memorial",mid,culture,culture,"family,relaxation",low
+Hakone,Japan,temperate,13.0,4,10,4,"museums,food,hiking,shopping,nightlife",20,"Oct-Nov,Jan-Mar","onsen,hot-springs,resort,spa,peaceful,tranquil,mountain,calm,zen,yoga,retreat",luxury,relaxation,budget,,low
+Nara,Japan,temperate,15.0,2,10,4,"shopping,temples,museums,food,nightlife",35,"Mar-May,Oct-Nov","temple,heritage,UNESCO,ancient,history,monument,shrine,cultural,park,museum",mid,culture,culture,"family,luxury",low
+Okinawa,Japan,subtropical,23.0,4,10,3,"diving,shopping,surfing,food,beaches",40,Apr-Jun,"beach,diving,snorkeling,resort,spa,peaceful,island,paradise,calm,sunset",mid,relaxation,culture,"adventure,family",low
+Nagano,Japan,continental,10.0,2,10,3,"temples,food,shopping,nightlife,museums",15,"Dec-Mar,Jun-Sep","skiing,hiking,trekking,mountain,adventure,hot-springs,expedition,climbing",mid,adventure,budget,,low
+Kanazawa,Japan,temperate,13.0,3,9,4,"shopping,food,temples,museums,nightlife",40,"Apr-May,Oct-Nov","geisha,traditional,culture,arts,heritage,ancient,museum,palace,shrine",mid,culture,culture,"family,budget",low
+Arashiyama,Japan,temperate,15.0,8,7,4,"wildlife,temples",5,"Mar-Apr,Nov","peaceful,zen,temple,bamboo,tranquil,serene,calm,garden,meditation,quiet",mid,relaxation,budget,,low
+Nikko,Japan,temperate,10.0,3,10,4,"temples,shopping,hiking,nightlife,wildlife",30,"Apr-May,Oct-Nov","shrine,temple,UNESCO,heritage,monument,ancient,cultural,architecture,history",mid,culture,culture,"relaxation,family",low
+Fuji Five Lakes,Japan,temperate,10.0,4,10,4,"museums,climbing,shopping,cycling,beaches",10,"Apr-May,Jul-Sep","hiking,trekking,climbing,adventure,mountain,expedition,surf,kayaking",mid,adventure,budget,,low
+Sapporo,Japan,continental,8.0,3,10,4,"shopping,museums,food,nightlife,cycling",36,"Feb-Mar,Jul-Aug","skiing,adventure,budget,affordable,cheap,hostel,trekking,hiking,backpacking",budget,adventure,culture,"family,adventure",low
+Takayama,Japan,continental,11.0,3,10,4,"museums,shopping,food,temples,nightlife",21,"Apr-May,Oct-Nov","traditional,culture,heritage,ancient,festival,sake,monument,museum,art,shrine",mid,culture,budget,,low
+Miyajima,Japan,temperate,15.0,4,7,4,"food,shopping,temples,hiking,nightlife",18,"Apr-May,Oct-Nov","shrine,UNESCO,heritage,culture,ancient,monument,temple,history,architecture",mid,culture,budget,,low
+Kamakura,Japan,temperate,15.0,2,10,4,"temples,beaches,surfing,cycling,hiking",31,"Mar-May,Sep-Nov","temple,ancient,heritage,culture,monument,shrine,history,hiking,trekking",mid,culture,culture,"adventure,relaxation",low
+Shinjuku Japan,Japan,temperate,16.0,2,7,3,"food,nightlife",50,"Mar-May,Sep-Nov","budget,affordable,hostel,cheap,street-food,nightlife,backpacking,inexpensive",budget,budget,budget,,medium
+Beppu Onsen,Japan,subtropical,17.0,7,7,2,"museums,shopping",15,"Oct-Nov,Mar-May","onsen,hot-springs,spa,relaxing,resort,peaceful,tranquil,zen,calm,massage",mid,relaxation,budget,,low
+Sendai,Japan,temperate,12.0,3,10,4,"shopping,museums,food,nightlife,temples",35,"Apr-May,Aug","culture,castle,history,heritage,museum,traditional,shrine,ancient,monument",mid,culture,culture,"family,budget",low
+Seoul,South Korea,temperate,13.0,3,10,4,"museums,cycling,shopping,temples,food",40,"Mar-May,Sep-Nov","palace,culture,heritage,history,traditional,museum,monument,ancient,shrine,affordable",budget,culture,culture,"family,adventure",low
+Busan,South Korea,temperate,14.0,5,7,4,"beaches,food,shopping,hiking,temples",40,Jun-Sep,"beach,spa,resort,peaceful,temple,tranquil,calm,seafood,sunset",mid,relaxation,adventure,culture,low
+Jeju Island,South Korea,subtropical,15.0,4,7,4,"beaches,cycling,food,shopping,hiking",40,"Mar-Jun,Sep-Nov","trekking,hiking,volcano,adventure,diving,beach,climbing,expedition,mountain",mid,adventure,culture,"adventure,family",low
+Gyeongju,South Korea,temperate,13.0,5,10,4,"temples,shopping,food,museums,beaches",40,"Apr-May,Oct","UNESCO,ancient,temple,heritage,history,tombs,cultural,monument,shrine,ruins",budget,culture,culture,"family,relaxation",low
+Jeonju,South Korea,temperate,13.0,7,7,4,"museums,food,nightlife,shopping,cycling",19,"Mar-May,Sep-Nov","traditional,heritage,culture,ancient,architecture,museum,art,shrine,cultural",budget,culture,budget,,low
+Seoraksan,South Korea,temperate,10.0,2,7,2,hiking,10,Sep-Oct,"hiking,trekking,mountain,adventure,climbing,expedition,wildlife,national-park",budget,adventure,budget,,low
+Incheon,South Korea,temperate,13.0,5,10,4,"shopping,food,museums,beaches,cycling",40,"Apr-May,Sep-Oct","budget,affordable,cheap,hostel,backpacking,inexpensive,market,street-food",budget,budget,culture,"family,adventure",low
+Andong,South Korea,temperate,13.0,3,7,4,"temples,food,shopping,museums,hiking",35,Sep-Oct,"traditional,folk-village,heritage,culture,ancient,history,museum,art,cultural",budget,culture,culture,adventure,low
+Namhansanseong,South Korea,temperate,13.0,5,10,2,"shopping,food,hiking",15,"Mar-May,Oct-Nov","hiking,trekking,mountain,fortress,adventure,climbing,expedition",budget,adventure,budget,,low
+Sokcho,South Korea,temperate,13.0,4,10,4,"beaches,cycling,food,shopping,temples",28,"Jul-Aug,Oct","hiking,trekking,beach,adventure,mountain,climbing,national-park,wildlife",budget,adventure,budget,,low
+Kathmandu,Nepal,highland,17.0,4,6,4,"shopping,hiking,food,nightlife,temples",40,"Oct-Dec,Mar-May","temple,culture,heritage,history,traditional,shrine,monument,palace,ancient,UNESCO",budget,culture,culture,adventure,low
+Pokhara,Nepal,highland,18.0,3,10,4,"hiking,food,yoga,nightlife,shopping",35,"Oct-Dec,Mar-May","trekking,hiking,paragliding,mountain,adventure,climbing,expedition,lake",budget,adventure,relaxation,"adventure,family",low
+Everest Base Camp,Nepal,highland,0.0,8,5,4,"hiking,climbing",5,"Oct-Nov,Apr-May","extreme,trekking,mountaineering,expedition,climbing,hiking,adventure,mountain",mid,adventure,budget,,low
+Annapurna Circuit,Nepal,highland,5.0,3,7,3,"hiking,climbing,shopping,temples,food",28,"Oct-Nov,Mar-Apr","trekking,hiking,mountain,expedition,adventure,climbing,remote,extreme",budget,adventure,budget,,low
+Chitwan,Nepal,subtropical,26.0,8,10,3,"wildlife,yoga,shopping,cycling,kayaking",24,Oct-Mar,"wildlife,safari,elephant,tigers,adventure,trekking,national-park,expedition",mid,adventure,budget,,low
+Lumbini,Nepal,subtropical,24.0,4,7,3,"cycling,temples,shopping,food",15,Oct-Mar,"UNESCO,heritage,pilgrimage,temple,monument,ancient,cultural,history,shrine",budget,culture,budget,,low
+Patan,Nepal,highland,17.0,5,4,3,"temples,nightlife,food,shopping,museums",21,"Oct-Dec,Mar-May","medieval,ancient,temple,UNESCO,heritage,traditional,architecture,monument,art",budget,culture,budget,,low
+Bhaktapur,Nepal,highland,17.0,2,7,3,"temples,food,shopping,nightlife,museums",17,"Oct-Nov,Mar-Apr","medieval,ancient,UNESCO,temple,heritage,traditional,pottery,monument,shrine",budget,culture,budget,,low
+Bardia,Nepal,subtropical,26.0,4,7,3,nightlife,3,Oct-Apr,"wildlife,safari,tigers,trekking,adventure,expedition,national-park,remote",mid,adventure,budget,,low
+Bandipur,Nepal,highland,18.0,7,7,3,,3,"Oct-Nov,Mar-Apr","peaceful,tranquil,quiet,serene,hilltop,calm,zen,retreat,views,village",budget,relaxation,budget,,low
+El Nido Palawan,Philippines,tropical,28.0,7,10,4,"nightlife,beaches,shopping",28,Dec-May,"diving,kayaking,snorkeling,beach,cliff,adventure,limestone,expedition",mid,adventure,budget,,low
+Boracay,Philippines,tropical,28.0,4,9,3,"beaches,shopping,food,nightlife,diving",40,Nov-May,"beach,resort,spa,water-sports,sunset,tranquil,paradise,pool,calm,yoga",mid,relaxation,relaxation,"adventure,luxury",low
+Cebu,Philippines,tropical,28.0,2,7,3,,1,Dec-May,"diving,budget,affordable,backpacking,cheap,hostel,island,street-food,inexpensive",budget,budget,budget,,low
+Siargao,Philippines,tropical,27.0,3,6,4,"surfing,beaches,nightlife,diving,shopping",16,Mar-May,"surfing,adventure,diving,beach,kayaking,expedition,island",mid,adventure,budget,,low
+Bohol,Philippines,tropical,28.0,6,7,4,"beaches,diving,cycling,shopping,food",19,Dec-May,"diving,island-hopping,adventure,wildlife,trekking,kayaking,snorkeling",mid,adventure,budget,,low
+Manila,Philippines,tropical,28.0,3,8,4,"shopping,food,museums,nightlife,temples",40,Dec-May,"history,museum,culture,heritage,colonial,architecture,traditional,market,monument",budget,culture,culture,family,low
+Coron Palawan,Philippines,tropical,28.0,1,7,3,"diving,kayaking,beaches",50,Dec-May,"diving,snorkeling,kayaking,adventure,lagoon,expedition,beach,cliff",mid,adventure,adventure,,medium
+Batanes Islands,Philippines,subtropical,24.0,4,8,2,"beaches,shopping,hiking,nightlife",28,Mar-Jun,"peaceful,quiet,remote,tranquil,serene,views,calm,rolling-hills,zen",mid,relaxation,budget,,low
+Siquijor,Philippines,tropical,28.0,5,7,3,"diving,beaches,food,shopping,cycling",22,Dec-May,"beach,diving,peaceful,tranquil,waterfall,quiet,calm,serene,paradise",budget,relaxation,budget,,low
+Vigan,Philippines,subtropical,27.0,5,10,3,"shopping,food,nightlife,museums",18,Nov-Apr,"UNESCO,heritage,colonial,architecture,history,cultural,monument,ancient,traditional",budget,culture,budget,,low
+Siem Reap,Cambodia,tropical,28.0,5,7,4,"shopping,cycling,temples,museums,food",40,Nov-Apr,"UNESCO,Angkor,temple,ruins,ancient,heritage,history,monument,cultural,shrine",budget,culture,culture,"family,relaxation",low
+Phnom Penh,Cambodia,tropical,27.0,3,6,4,"shopping,cycling,museums,food,temples",40,Nov-Apr,"history,museum,heritage,colonial,cultural,market,monument,traditional,ancient",budget,culture,culture,"family,budget",low
+Kampot,Cambodia,tropical,28.0,4,10,3,"shopping,food,cycling,nightlife,beaches",29,Nov-Apr,"peaceful,riverside,calm,cycling,quiet,tranquil,serene,budget,affordable,cheap",budget,relaxation,budget,,low
+Koh Rong,Cambodia,tropical,28.0,4,10,3,"beaches,food,nightlife,wildlife,shopping",22,Nov-Apr,"beach,diving,snorkeling,peaceful,paradise,tranquil,budget,island,calm,sunset",budget,relaxation,budget,,low
+Battambang,Cambodia,tropical,28.0,3,8,4,"shopping,cycling,food,temples,nightlife",23,Nov-Apr,"colonial,heritage,culture,traditional,history,art,museum,ancient,cultural",budget,culture,budget,,low
+Kratie,Cambodia,tropical,27.0,3,10,4,"shopping,food,cycling,temples,nightlife",19,Nov-Apr,"wildlife,cycling,adventure,boat,river,expedition,remote,kayaking",budget,adventure,budget,,low
+Mondulkiri,Cambodia,highland,22.0,4,10,4,"diving,wildlife",6,Nov-Apr,"elephant,wildlife,trekking,hiking,adventure,waterfall,expedition,safari,national-park",mid,adventure,budget,,low
+Kep,Cambodia,tropical,28.0,4,10,3,"food,shopping,beaches,nightlife,cycling",19,Nov-Apr,"beach,seafood,peaceful,quiet,tranquil,serene,calm,resort,relaxing",budget,relaxation,budget,,low
+Singapore City,Singapore,tropical,27.0,4,4,3,"shopping,food,nightlife,museums,beaches",40,all-year,"luxury,fine-dining,exclusive,5-star,upscale,resort,private,villa,marina",luxury,luxury,culture,"luxury,family",low
+Sentosa Singapore,Singapore,tropical,27.0,4,10,3,beaches,50,all-year,"family,kids,children,aquarium,theme-park,resort,beach,safe,park,educational",luxury,family,family,,medium
+Little India SG,Singapore,tropical,27.0,1,7,3,"temples,food,shopping",50,all-year,"culture,temple,heritage,traditional,market,street-food,history,monument,shrine",budget,culture,culture,,medium
+Clarke Quay SG,Singapore,tropical,27.0,2,7,3,"nightlife,food",50,all-year,"budget,nightlife,riverside,affordable,food,hostel,backpacking,cheap,inexpensive",mid,budget,budget,,medium
+Chinatown SG,Singapore,tropical,27.0,1,7,3,"temples,food,shopping",50,all-year,"temple,culture,heritage,traditional,market,history,street-food,shrine,monument",budget,culture,culture,,medium
+Penang,Malaysia,tropical,27.0,3,7,4,"beaches,shopping,cycling,food,temples",40,Dec-Feb,"UNESCO,heritage,culture,traditional,street-food,temple,art,architecture,monument,history",budget,culture,culture,"adventure,relaxation",low
+Langkawi,Malaysia,tropical,28.0,4,9,3,"food,beaches,shopping,nightlife,cycling",40,Nov-Apr,"beach,resort,mangrove,spa,tranquil,peaceful,paradise,island,calm,sunset",mid,relaxation,relaxation,"family,adventure",low
+Kota Kinabalu,Malaysia,tropical,27.0,5,7,4,"diving,beaches,shopping,food,museums",40,Apr-Oct,"trekking,hiking,mountain,adventure,diving,wildlife,expedition,climbing,safari",mid,adventure,family,"adventure,culture",low
+Cameron Highlands,Malaysia,highland,18.0,4,10,4,"hiking,shopping,food,museums,yoga",40,all-year,"peaceful,tea,hiking,quiet,tranquil,cool,calm,serene,yoga,garden,retreat",budget,relaxation,adventure,"relaxation,culture",low
+Malacca,Malaysia,tropical,27.0,4,10,4,"shopping,museums,temples,beaches,nightlife",40,Jun-Aug,"UNESCO,heritage,colonial,culture,history,traditional,architecture,monument,shrine,ancient",budget,culture,culture,"family,budget",low
+Perhentian Islands,Malaysia,tropical,28.0,5,9,3,"beaches,diving,food,shopping,nightlife",40,Apr-Oct,"beach,snorkeling,diving,peaceful,paradise,tranquil,calm,island,sunset,serene",budget,relaxation,relaxation,"adventure,family",low
+Tioman Island,Malaysia,tropical,28.0,4,10,3,"diving,beaches,food,shopping,wildlife",40,Apr-Sep,"diving,snorkeling,trekking,adventure,jungle,beach,kayaking,wildlife,expedition",mid,adventure,adventure,"relaxation,budget",low
+Taman Negara,Malaysia,tropical,26.0,4,5,3,"hiking,food,wildlife,nightlife,shopping",16,Apr-Oct,"trekking,hiking,wildlife,adventure,jungle,safari,expedition,canopy,kayaking",mid,adventure,budget,,low
+Ipoh,Malaysia,tropical,27.0,4,10,4,"shopping,food,nightlife,temples,hiking",40,Nov-Jan,"heritage,culture,temple,history,architecture,traditional,museum,monument,colonial,ancient",budget,culture,culture,"family,adventure",low
+Yangon,Myanmar,tropical,27.0,4,9,4,"temples,food,shopping,nightlife,museums",40,Nov-Feb,"UNESCO,pagoda,temple,heritage,culture,history,colonial,traditional,monument,shrine",budget,culture,culture,"family,budget",low
+Bagan,Myanmar,tropical,28.0,4,10,4,"temples,shopping,cycling,food,nightlife",39,Nov-Feb,"ancient,temple,ruins,UNESCO,heritage,monument,palace,history,cultural,shrine",mid,culture,culture,"relaxation,budget",low
+Mandalay,Myanmar,tropical,27.0,4,8,4,"cycling,shopping,food,temples,nightlife",34,Nov-Feb,"palace,temple,culture,heritage,traditional,ancient,monastery,shrine,history,monument",budget,culture,culture,"relaxation,budget",low
+Inle Lake,Myanmar,highland,22.0,4,10,4,"shopping,food,cycling,temples,hiking",21,Nov-Feb,"traditional,culture,heritage,crafts,floating-village,ancient,cultural,peaceful,lake",mid,culture,budget,,low
+Ngapali,Myanmar,tropical,27.0,4,10,4,"beaches,food,cycling,nightlife,shopping",25,Oct-Apr,"beach,peaceful,pristine,tranquil,quiet,serene,paradise,resort,sunset,calm",mid,relaxation,budget,,low
+Hsipaw,Myanmar,highland,22.0,4,10,4,"hiking,shopping,food,cycling,temples",16,Nov-Feb,"trekking,hiking,adventure,remote,hill-tribes,mountain,expedition,climbing,wildlife",budget,adventure,budget,,low
+Hpa An,Myanmar,tropical,28.0,2,7,4,"climbing,temples,nightlife",12,Nov-Mar,"cave,temple,culture,ancient,heritage,monument,karst,shrine,traditional,ruins",budget,culture,budget,,low
+Mrauk U,Myanmar,tropical,28.0,4,10,3,"temples,food,shopping,cycling",24,Nov-Feb,"ancient,temple,ruins,heritage,remote,monument,cultural,shrine,history,palace",budget,culture,budget,,low
+Luang Prabang,Laos,tropical,26.0,4,6,4,"shopping,food,wildlife,nightlife,cycling",40,Oct-Apr,"UNESCO,temple,culture,heritage,traditional,monastery,shrine,history,monument,colonial",budget,culture,culture,"family,budget",low
+Vang Vieng,Laos,tropical,26.0,3,7,4,"nightlife,food,cycling,shopping,kayaking",30,Oct-May,"tubing,kayaking,rock-climbing,cave,adventure,trekking,budget,cheap,backpacking,hostel",budget,adventure,adventure,"budget,family",low
+Vientiane,Laos,tropical,27.0,5,6,4,"shopping,cycling,temples,museums,food",40,Oct-Apr,"temple,culture,heritage,traditional,museum,monument,colonial,shrine,ancient,history",budget,culture,culture,"family,relaxation",low
+4000 Islands,Laos,tropical,28.0,1,7,2,,50,Oct-May,"peaceful,hammock,tranquil,budget,calm,quiet,serene,cheap,affordable,island",budget,relaxation,relaxation,budget,medium
+Nong Khiaw,Laos,tropical,27.0,4,8,3,"food,hiking,shopping,climbing,cycling",18,Oct-Apr,"peaceful,quiet,serene,remote,tranquil,calm,trekking,river,mountain,zen",budget,relaxation,budget,,low
+Plain of Jars,Laos,highland,20.0,7,10,4,"cycling,shopping",13,Oct-Apr,"ancient,UNESCO,heritage,mysterious,cultural,monument,history,ruins,traditional",budget,culture,budget,,low
+Luang Namtha,Laos,highland,22.0,4,10,3,"hiking,shopping,food,cycling,kayaking",21,Oct-Apr,"trekking,hiking,adventure,remote,tribal,expedition,cycling,wildlife,mountain",budget,adventure,budget,,low
+Pakse,Laos,tropical,28.0,4,6,4,"shopping,food,cycling,hiking,museums",40,Oct-Apr,"trekking,hiking,cycling,adventure,waterfall,coffee,expedition,mountain,kayaking",budget,adventure,culture,"adventure,budget",low
+Paro,Bhutan,highland,10.0,4,10,3,"temples,food,shopping,hiking,museums",16,"Mar-May,Sep-Nov","temple,monastery,trekking,heritage,culture,traditional,ancient,shrine,UNESCO,hiking",luxury,culture,budget,,low
+Thimphu,Bhutan,highland,10.0,4,10,3,"shopping,food,nightlife,temples,museums",40,"Mar-May,Sep-Nov","culture,museum,monastery,heritage,traditional,temple,ancient,monument,shrine,UNESCO",luxury,culture,culture,"relaxation,family",low
+Punakha,Bhutan,highland,16.0,4,7,3,"hiking,food,temples",11,"Mar-May,Sep-Nov","monastery,temple,culture,heritage,traditional,ancient,monument,shrine,fortress",luxury,culture,budget,,low
+Colombo,Sri Lanka,tropical,27.0,3,10,4,"food,shopping,museums,nightlife,temples",40,Dec-Apr,"culture,temple,history,heritage,colonial,traditional,market,monument,shrine,ancient",budget,culture,culture,"family,luxury",low
+Galle,Sri Lanka,tropical,27.0,4,10,4,"shopping,food,beaches,temples,nightlife",23,Dec-Apr,"Dutch,UNESCO,heritage,colonial,architecture,culture,fort,monument,history,beach,traditional",mid,culture,budget,,low
+Sigiriya,Sri Lanka,tropical,27.0,5,10,3,"wildlife,nightlife,temples,climbing,food",18,Jan-Apr,"ancient,ruins,trekking,climbing,adventure,heritage,UNESCO,monument,history,expedition",mid,adventure,budget,,low

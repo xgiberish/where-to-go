@@ -1,0 +1,1873 @@
+{
+  "algorithm": {
+    "description": "Keyword-density labeling. density = total_keyword_occurrences / num_reviews. Primary label = style with highest density >= KEYWORD_THRESHOLD. Secondary labels = other styles above threshold (up to 2). Fallback = 'budget' when no style clears threshold.",
+    "keyword_threshold": 0.15,
+    "min_reviews_for_labeling": 30
+  },
+  "keyword_sets": {
+    "adventure": [
+      "trek",
+      "trekking",
+      "hike",
+      "hiking",
+      "adventure",
+      "climb",
+      "climbing",
+      "mountain",
+      "extreme",
+      "rafting",
+      "diving",
+      "surf",
+      "surfing",
+      "snorkel",
+      "snorkeling",
+      "scuba",
+      "wildlife",
+      "expedition",
+      "kayaking",
+      "paragliding",
+      "zip-line",
+      "rappelling",
+      "volcano",
+      "mountaineering",
+      "canyoning",
+      "abseiling"
+    ],
+    "relaxation": [
+      "relax",
+      "relaxing",
+      "spa",
+      "massage",
+      "peaceful",
+      "quiet",
+      "serene",
+      "calm",
+      "resort",
+      "pool",
+      "sunset",
+      "paradise",
+      "tranquil",
+      "zen",
+      "yoga",
+      "hammock",
+      "retreat",
+      "hot-springs",
+      "onsen",
+      "wellness"
+    ],
+    "culture": [
+      "temple",
+      "culture",
+      "cultural",
+      "history",
+      "historical",
+      "museum",
+      "art",
+      "traditional",
+      "heritage",
+      "ancient",
+      "architecture",
+      "palace",
+      "ruins",
+      "monument",
+      "shrine",
+      "monastery",
+      "pagoda",
+      "colonial",
+      "UNESCO",
+      "pilgrimage"
+    ],
+    "budget": [
+      "cheap",
+      "affordable",
+      "backpack",
+      "backpacking",
+      "hostel",
+      "inexpensive",
+      "value",
+      "economical",
+      "bargain",
+      "street-food",
+      "night-market",
+      "guesthouse"
+    ],
+    "luxury": [
+      "luxury",
+      "luxurious",
+      "high-end",
+      "premium",
+      "exclusive",
+      "upscale",
+      "5-star",
+      "five-star",
+      "elegant",
+      "sophisticated",
+      "gourmet",
+      "fine-dining",
+      "private",
+      "villa",
+      "butler",
+      "rooftop",
+      "infinity-pool"
+    ],
+    "family": [
+      "family",
+      "families",
+      "kids",
+      "children",
+      "child-friendly",
+      "safe",
+      "park",
+      "playground",
+      "educational",
+      "zoo",
+      "aquarium",
+      "theme-park",
+      "stroller",
+      "baby"
+    ]
+  },
+  "per_destination": {
+    "Bangkok": {
+      "densities": {
+        "adventure": 0.1,
+        "relaxation": 0.05,
+        "culture": 0.65,
+        "budget": 0.3,
+        "luxury": 0.1,
+        "family": 0.325
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "family",
+        "budget"
+      ],
+      "confidence": "low"
+    },
+    "Chiang Mai": {
+      "densities": {
+        "adventure": 0.2,
+        "relaxation": 0.1,
+        "culture": 1.325,
+        "budget": 0.2,
+        "luxury": 0.15,
+        "family": 0.5
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "family",
+        "adventure"
+      ],
+      "confidence": "low"
+    },
+    "Phuket": {
+      "densities": {
+        "adventure": 0.625,
+        "relaxation": 0.25,
+        "culture": 0.075,
+        "budget": 0.1,
+        "luxury": 0.125,
+        "family": 0.1
+      },
+      "primary_label": "adventure",
+      "secondary_labels": [
+        "relaxation"
+      ],
+      "confidence": "low"
+    },
+    "Krabi": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Koh Samui": {
+      "densities": {
+        "adventure": 0.2702702702702703,
+        "relaxation": 0.35135135135135137,
+        "culture": 0.5135135135135135,
+        "budget": 0.16216216216216217,
+        "luxury": 0.32432432432432434,
+        "family": 0.35135135135135137
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "relaxation",
+        "family"
+      ],
+      "confidence": "low"
+    },
+    "Pattaya": {
+      "densities": {
+        "adventure": 0.05,
+        "relaxation": 0.125,
+        "culture": 0.225,
+        "budget": 0.275,
+        "luxury": 0.125,
+        "family": 0.35
+      },
+      "primary_label": "family",
+      "secondary_labels": [
+        "budget",
+        "culture"
+      ],
+      "confidence": "low"
+    },
+    "Ayutthaya": {
+      "densities": {
+        "adventure": 0.075,
+        "relaxation": 0.175,
+        "culture": 3.45,
+        "budget": 0.325,
+        "luxury": 0.1,
+        "family": 0.425
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "family",
+        "budget"
+      ],
+      "confidence": "low"
+    },
+    "Koh Tao": {
+      "densities": {
+        "adventure": 2.225,
+        "relaxation": 2.075,
+        "culture": 0.05,
+        "budget": 0.475,
+        "luxury": 0.725,
+        "family": 0.4
+      },
+      "primary_label": "adventure",
+      "secondary_labels": [
+        "relaxation",
+        "luxury"
+      ],
+      "confidence": "low"
+    },
+    "Pai": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Chiang Rai": {
+      "densities": {
+        "adventure": 0.125,
+        "relaxation": 0.55,
+        "culture": 1.525,
+        "budget": 0.225,
+        "luxury": 0.175,
+        "family": 0.325
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "relaxation",
+        "family"
+      ],
+      "confidence": "low"
+    },
+    "Hua Hin": {
+      "densities": {
+        "adventure": 0.3,
+        "relaxation": 0.675,
+        "culture": 0.65,
+        "budget": 0.05,
+        "luxury": 0.175,
+        "family": 0.575
+      },
+      "primary_label": "relaxation",
+      "secondary_labels": [
+        "culture",
+        "family"
+      ],
+      "confidence": "low"
+    },
+    "Koh Phi Phi": {
+      "densities": {
+        "adventure": 0.425,
+        "relaxation": 0.425,
+        "culture": 0.05,
+        "budget": 0.1,
+        "luxury": 0.1,
+        "family": 0.3
+      },
+      "primary_label": "adventure",
+      "secondary_labels": [
+        "relaxation",
+        "family"
+      ],
+      "confidence": "low"
+    },
+    "Railay Beach": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Kanchanaburi": {
+      "densities": {
+        "adventure": 0.225,
+        "relaxation": 0.9,
+        "culture": 1.125,
+        "budget": 0.3,
+        "luxury": 0.225,
+        "family": 0.775
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "relaxation",
+        "family"
+      ],
+      "confidence": "low"
+    },
+    "Sukhothai": {
+      "densities": {
+        "adventure": 0.23529411764705882,
+        "relaxation": 0.5588235294117647,
+        "culture": 4.029411764705882,
+        "budget": 0.5882352941176471,
+        "luxury": 0.20588235294117646,
+        "family": 1.2941176470588236
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "family",
+        "budget"
+      ],
+      "confidence": "low"
+    },
+    "Koh Lanta": {
+      "densities": {
+        "adventure": 0.325,
+        "relaxation": 1.575,
+        "culture": 0.5,
+        "budget": 0.175,
+        "luxury": 0.325,
+        "family": 0.45
+      },
+      "primary_label": "relaxation",
+      "secondary_labels": [
+        "culture",
+        "family"
+      ],
+      "confidence": "low"
+    },
+    "Khao Yai": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Phang Nga": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Samui Luxury": {
+      "densities": {
+        "adventure": 0.0,
+        "relaxation": 0.24,
+        "culture": 0.06,
+        "budget": 0.0,
+        "luxury": 0.76,
+        "family": 0.0
+      },
+      "primary_label": "luxury",
+      "secondary_labels": [
+        "relaxation"
+      ],
+      "confidence": "medium"
+    },
+    "Chiang Dao": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Hanoi": {
+      "densities": {
+        "adventure": 0.175,
+        "relaxation": 0.1,
+        "culture": 2.6,
+        "budget": 0.05,
+        "luxury": 0.025,
+        "family": 0.475
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "family",
+        "adventure"
+      ],
+      "confidence": "low"
+    },
+    "Ho Chi Minh City": {
+      "densities": {
+        "adventure": 0.05,
+        "relaxation": 0.1,
+        "culture": 2.35,
+        "budget": 0.25,
+        "luxury": 0.15,
+        "family": 0.5
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "family",
+        "budget"
+      ],
+      "confidence": "low"
+    },
+    "Hoi An": {
+      "densities": {
+        "adventure": 0.125,
+        "relaxation": 0.05,
+        "culture": 1.45,
+        "budget": 0.15,
+        "luxury": 0.125,
+        "family": 0.2
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "family",
+        "budget"
+      ],
+      "confidence": "low"
+    },
+    "Ha Long Bay": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Da Nang": {
+      "densities": {
+        "adventure": 0.55,
+        "relaxation": 0.15,
+        "culture": 0.65,
+        "budget": 0.1,
+        "luxury": 0.0,
+        "family": 0.175
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "adventure",
+        "family"
+      ],
+      "confidence": "low"
+    },
+    "Hue": {
+      "densities": {
+        "adventure": 0.02564102564102564,
+        "relaxation": 0.5128205128205128,
+        "culture": 0.8461538461538461,
+        "budget": 0.2564102564102564,
+        "luxury": 0.1282051282051282,
+        "family": 0.5384615384615384
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "family",
+        "relaxation"
+      ],
+      "confidence": "low"
+    },
+    "Sa Pa": {
+      "densities": {
+        "adventure": 0.6774193548387096,
+        "relaxation": 0.2903225806451613,
+        "culture": 0.4838709677419355,
+        "budget": 0.3870967741935484,
+        "luxury": 0.0967741935483871,
+        "family": 0.6774193548387096
+      },
+      "primary_label": "adventure",
+      "secondary_labels": [
+        "family",
+        "culture"
+      ],
+      "confidence": "low"
+    },
+    "Phu Quoc": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Dalat": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Ninh Binh": {
+      "densities": {
+        "adventure": 0.21875,
+        "relaxation": 0.15625,
+        "culture": 1.09375,
+        "budget": 0.25,
+        "luxury": 0.09375,
+        "family": 0.375
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "family",
+        "budget"
+      ],
+      "confidence": "low"
+    },
+    "Nha Trang": {
+      "densities": {
+        "adventure": 0.45,
+        "relaxation": 2.025,
+        "culture": 0.5,
+        "budget": 0.375,
+        "luxury": 0.475,
+        "family": 0.85
+      },
+      "primary_label": "relaxation",
+      "secondary_labels": [
+        "family",
+        "culture"
+      ],
+      "confidence": "low"
+    },
+    "Mui Ne": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Mekong Delta": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Hoa Lu": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Con Dao": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Bali Ubud": {
+      "densities": {
+        "adventure": 0.0,
+        "relaxation": 0.1,
+        "culture": 0.86,
+        "budget": 0.0,
+        "luxury": 0.0,
+        "family": 0.0
+      },
+      "primary_label": "culture",
+      "secondary_labels": [],
+      "confidence": "medium"
+    },
+    "Bali Seminyak": {
+      "densities": {
+        "adventure": 0.0,
+        "relaxation": 0.2,
+        "culture": 0.06,
+        "budget": 0.0,
+        "luxury": 0.7,
+        "family": 0.0
+      },
+      "primary_label": "luxury",
+      "secondary_labels": [
+        "relaxation"
+      ],
+      "confidence": "medium"
+    },
+    "Bali Kuta": {
+      "densities": {
+        "adventure": 0.14,
+        "relaxation": 0.0,
+        "culture": 0.06,
+        "budget": 0.6,
+        "luxury": 0.0,
+        "family": 0.0
+      },
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "medium"
+    },
+    "Yogyakarta": {
+      "densities": {
+        "adventure": 0.0,
+        "relaxation": 0.125,
+        "culture": 1.5,
+        "budget": 0.0,
+        "luxury": 0.05,
+        "family": 0.125
+      },
+      "primary_label": "culture",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Lombok": {
+      "densities": {
+        "adventure": 0.05,
+        "relaxation": 0.25,
+        "culture": 0.475,
+        "budget": 0.075,
+        "luxury": 0.375,
+        "family": 0.15
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "luxury",
+        "relaxation"
+      ],
+      "confidence": "low"
+    },
+    "Komodo Island": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Raja Ampat": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Gili Islands": {
+      "densities": {
+        "adventure": 0.5,
+        "relaxation": 0.3,
+        "culture": 0.025,
+        "budget": 0.15,
+        "luxury": 0.25,
+        "family": 0.125
+      },
+      "primary_label": "adventure",
+      "secondary_labels": [
+        "relaxation",
+        "luxury"
+      ],
+      "confidence": "low"
+    },
+    "Nusa Penida": {
+      "densities": {
+        "adventure": 0.4666666666666667,
+        "relaxation": 0.23333333333333334,
+        "culture": 0.3333333333333333,
+        "budget": 0.06666666666666667,
+        "luxury": 0.03333333333333333,
+        "family": 0.16666666666666666
+      },
+      "primary_label": "adventure",
+      "secondary_labels": [
+        "culture",
+        "relaxation"
+      ],
+      "confidence": "low"
+    },
+    "Jakarta": {
+      "densities": {
+        "adventure": 0.05,
+        "relaxation": 0.0,
+        "culture": 0.2,
+        "budget": 0.125,
+        "luxury": 0.125,
+        "family": 0.1
+      },
+      "primary_label": "culture",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Tana Toraja": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Lake Toba Sumatra": {
+      "densities": {
+        "adventure": 0.0,
+        "relaxation": 0.78,
+        "culture": 0.16,
+        "budget": 0.0,
+        "luxury": 0.0,
+        "family": 0.0
+      },
+      "primary_label": "relaxation",
+      "secondary_labels": [
+        "culture"
+      ],
+      "confidence": "medium"
+    },
+    "Flores": {
+      "densities": {
+        "adventure": 1.0,
+        "relaxation": 0.0,
+        "culture": 0.06,
+        "budget": 0.0,
+        "luxury": 0.0,
+        "family": 0.0
+      },
+      "primary_label": "adventure",
+      "secondary_labels": [],
+      "confidence": "medium"
+    },
+    "Amed Bali": {
+      "densities": {
+        "adventure": 0.72,
+        "relaxation": 0.0,
+        "culture": 0.06,
+        "budget": 0.0,
+        "luxury": 0.0,
+        "family": 0.0
+      },
+      "primary_label": "adventure",
+      "secondary_labels": [],
+      "confidence": "medium"
+    },
+    "Bromo Java": {
+      "densities": {
+        "adventure": 0.88,
+        "relaxation": 0.0,
+        "culture": 0.06,
+        "budget": 0.0,
+        "luxury": 0.0,
+        "family": 0.0
+      },
+      "primary_label": "adventure",
+      "secondary_labels": [],
+      "confidence": "medium"
+    },
+    "Bandung": {
+      "densities": {
+        "adventure": 0.15,
+        "relaxation": 0.1,
+        "culture": 0.7,
+        "budget": 0.1,
+        "luxury": 0.125,
+        "family": 0.2
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "family",
+        "adventure"
+      ],
+      "confidence": "low"
+    },
+    "Bintan": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Bogor": {
+      "densities": {
+        "adventure": 0.13513513513513514,
+        "relaxation": 0.3783783783783784,
+        "culture": 0.5945945945945946,
+        "budget": 0.13513513513513514,
+        "luxury": 0.05405405405405406,
+        "family": 0.43243243243243246
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "family",
+        "relaxation"
+      ],
+      "confidence": "low"
+    },
+    "Manado": {
+      "densities": {
+        "adventure": 0.09375,
+        "relaxation": 0.375,
+        "culture": 0.21875,
+        "budget": 0.09375,
+        "luxury": 0.125,
+        "family": 0.125
+      },
+      "primary_label": "relaxation",
+      "secondary_labels": [
+        "culture"
+      ],
+      "confidence": "low"
+    },
+    "Belitung": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Tokyo": {
+      "densities": {
+        "adventure": 0.025,
+        "relaxation": 0.225,
+        "culture": 0.55,
+        "budget": 0.15,
+        "luxury": 0.35,
+        "family": 0.25
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "luxury",
+        "family"
+      ],
+      "confidence": "low"
+    },
+    "Kyoto": {
+      "densities": {
+        "adventure": 0.075,
+        "relaxation": 0.125,
+        "culture": 1.15,
+        "budget": 0.1,
+        "luxury": 0.25,
+        "family": 0.325
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "family",
+        "luxury"
+      ],
+      "confidence": "low"
+    },
+    "Osaka": {
+      "densities": {
+        "adventure": 0.025,
+        "relaxation": 0.15,
+        "culture": 0.35,
+        "budget": 0.025,
+        "luxury": 0.075,
+        "family": 0.225
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "family",
+        "relaxation"
+      ],
+      "confidence": "low"
+    },
+    "Hiroshima": {
+      "densities": {
+        "adventure": 0.125,
+        "relaxation": 0.275,
+        "culture": 1.725,
+        "budget": 0.075,
+        "luxury": 0.05,
+        "family": 1.5
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "family",
+        "relaxation"
+      ],
+      "confidence": "low"
+    },
+    "Hakone": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Nara": {
+      "densities": {
+        "adventure": 0.05714285714285714,
+        "relaxation": 0.05714285714285714,
+        "culture": 1.9714285714285715,
+        "budget": 0.0,
+        "luxury": 0.17142857142857143,
+        "family": 0.7428571428571429
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "family",
+        "luxury"
+      ],
+      "confidence": "low"
+    },
+    "Okinawa": {
+      "densities": {
+        "adventure": 0.375,
+        "relaxation": 0.05,
+        "culture": 0.525,
+        "budget": 0.15,
+        "luxury": 0.1,
+        "family": 0.2
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "adventure",
+        "family"
+      ],
+      "confidence": "low"
+    },
+    "Hokkaido": {
+      "densities": {
+        "adventure": 0.21621621621621623,
+        "relaxation": 0.10810810810810811,
+        "culture": 0.3783783783783784,
+        "budget": 0.02702702702702703,
+        "luxury": 0.05405405405405406,
+        "family": 0.35135135135135137
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "family",
+        "adventure"
+      ],
+      "confidence": "low"
+    },
+    "Nagano": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Kanazawa": {
+      "densities": {
+        "adventure": 0.025,
+        "relaxation": 0.25,
+        "culture": 2.25,
+        "budget": 0.275,
+        "luxury": 0.225,
+        "family": 0.4
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "family",
+        "budget"
+      ],
+      "confidence": "low"
+    },
+    "Arashiyama": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Nikko": {
+      "densities": {
+        "adventure": 0.3333333333333333,
+        "relaxation": 0.6,
+        "culture": 1.9,
+        "budget": 0.3333333333333333,
+        "luxury": 0.23333333333333334,
+        "family": 0.43333333333333335
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "relaxation",
+        "family"
+      ],
+      "confidence": "low"
+    },
+    "Fuji Five Lakes": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Sapporo": {
+      "densities": {
+        "adventure": 0.25,
+        "relaxation": 0.19444444444444445,
+        "culture": 0.8055555555555556,
+        "budget": 0.1111111111111111,
+        "luxury": 0.05555555555555555,
+        "family": 0.75
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "family",
+        "adventure"
+      ],
+      "confidence": "low"
+    },
+    "Takayama": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Miyajima": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Kamakura": {
+      "densities": {
+        "adventure": 0.5161290322580645,
+        "relaxation": 0.3225806451612903,
+        "culture": 1.3870967741935485,
+        "budget": 0.0,
+        "luxury": 0.03225806451612903,
+        "family": 0.25806451612903225
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "adventure",
+        "relaxation"
+      ],
+      "confidence": "low"
+    },
+    "Shinjuku Japan": {
+      "densities": {
+        "adventure": 0.0,
+        "relaxation": 0.0,
+        "culture": 0.06,
+        "budget": 0.74,
+        "luxury": 0.0,
+        "family": 0.0
+      },
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "medium"
+    },
+    "Beppu Onsen": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Sendai": {
+      "densities": {
+        "adventure": 0.08571428571428572,
+        "relaxation": 0.14285714285714285,
+        "culture": 1.457142857142857,
+        "budget": 0.17142857142857143,
+        "luxury": 0.05714285714285714,
+        "family": 0.42857142857142855
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "family",
+        "budget"
+      ],
+      "confidence": "low"
+    },
+    "Seoul": {
+      "densities": {
+        "adventure": 0.2,
+        "relaxation": 0.05,
+        "culture": 1.375,
+        "budget": 0.075,
+        "luxury": 0.125,
+        "family": 0.6
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "family",
+        "adventure"
+      ],
+      "confidence": "low"
+    },
+    "Busan": {
+      "densities": {
+        "adventure": 0.3,
+        "relaxation": 0.025,
+        "culture": 0.275,
+        "budget": 0.075,
+        "luxury": 0.025,
+        "family": 0.125
+      },
+      "primary_label": "adventure",
+      "secondary_labels": [
+        "culture"
+      ],
+      "confidence": "low"
+    },
+    "Jeju Island": {
+      "densities": {
+        "adventure": 0.425,
+        "relaxation": 0.2,
+        "culture": 0.675,
+        "budget": 0.075,
+        "luxury": 0.1,
+        "family": 0.275
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "adventure",
+        "family"
+      ],
+      "confidence": "low"
+    },
+    "Gyeongju": {
+      "densities": {
+        "adventure": 0.35,
+        "relaxation": 0.45,
+        "culture": 3.425,
+        "budget": 0.225,
+        "luxury": 0.1,
+        "family": 1.375
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "family",
+        "relaxation"
+      ],
+      "confidence": "low"
+    },
+    "Jeonju": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Seoraksan": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Incheon": {
+      "densities": {
+        "adventure": 0.6,
+        "relaxation": 0.225,
+        "culture": 2.1,
+        "budget": 0.05,
+        "luxury": 0.075,
+        "family": 0.875
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "family",
+        "adventure"
+      ],
+      "confidence": "low"
+    },
+    "Andong": {
+      "densities": {
+        "adventure": 0.2,
+        "relaxation": 0.05714285714285714,
+        "culture": 1.7428571428571429,
+        "budget": 0.08571428571428572,
+        "luxury": 0.0,
+        "family": 0.14285714285714285
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "adventure"
+      ],
+      "confidence": "low"
+    },
+    "Namhansanseong": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Sokcho": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Kathmandu": {
+      "densities": {
+        "adventure": 0.15,
+        "relaxation": 0.1,
+        "culture": 0.5,
+        "budget": 0.075,
+        "luxury": 0.05,
+        "family": 0.125
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "adventure"
+      ],
+      "confidence": "low"
+    },
+    "Pokhara": {
+      "densities": {
+        "adventure": 1.4,
+        "relaxation": 2.0285714285714285,
+        "culture": 0.6285714285714286,
+        "budget": 0.37142857142857144,
+        "luxury": 0.34285714285714286,
+        "family": 0.7714285714285715
+      },
+      "primary_label": "relaxation",
+      "secondary_labels": [
+        "adventure",
+        "family"
+      ],
+      "confidence": "low"
+    },
+    "Everest Base Camp": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Annapurna Circuit": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Chitwan": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Lumbini": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Patan": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Bhaktapur": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Bardia": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Bandipur": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "El Nido Palawan": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Boracay": {
+      "densities": {
+        "adventure": 0.75,
+        "relaxation": 2.95,
+        "culture": 0.125,
+        "budget": 0.325,
+        "luxury": 0.65,
+        "family": 0.4
+      },
+      "primary_label": "relaxation",
+      "secondary_labels": [
+        "adventure",
+        "luxury"
+      ],
+      "confidence": "low"
+    },
+    "Cebu": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Siargao": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Bohol": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Manila": {
+      "densities": {
+        "adventure": 0.05,
+        "relaxation": 0.025,
+        "culture": 2.35,
+        "budget": 0.125,
+        "luxury": 0.025,
+        "family": 0.75
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "family"
+      ],
+      "confidence": "low"
+    },
+    "Coron Palawan": {
+      "densities": {
+        "adventure": 0.64,
+        "relaxation": 0.0,
+        "culture": 0.06,
+        "budget": 0.0,
+        "luxury": 0.0,
+        "family": 0.0
+      },
+      "primary_label": "adventure",
+      "secondary_labels": [],
+      "confidence": "medium"
+    },
+    "Batanes Islands": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Siquijor": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Vigan": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Siem Reap": {
+      "densities": {
+        "adventure": 0.125,
+        "relaxation": 0.5,
+        "culture": 1.325,
+        "budget": 0.1,
+        "luxury": 0.25,
+        "family": 0.775
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "family",
+        "relaxation"
+      ],
+      "confidence": "low"
+    },
+    "Phnom Penh": {
+      "densities": {
+        "adventure": 0.075,
+        "relaxation": 0.075,
+        "culture": 1.7,
+        "budget": 0.275,
+        "luxury": 0.025,
+        "family": 0.4
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "family",
+        "budget"
+      ],
+      "confidence": "low"
+    },
+    "Kampot": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Koh Rong": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Battambang": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Kratie": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Mondulkiri": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Kep": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Singapore City": {
+      "densities": {
+        "adventure": 0.05,
+        "relaxation": 0.075,
+        "culture": 1.225,
+        "budget": 0.125,
+        "luxury": 0.275,
+        "family": 0.25
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "luxury",
+        "family"
+      ],
+      "confidence": "low"
+    },
+    "Sentosa Singapore": {
+      "densities": {
+        "adventure": 0.0,
+        "relaxation": 0.1,
+        "culture": 0.06,
+        "budget": 0.0,
+        "luxury": 0.0,
+        "family": 0.9
+      },
+      "primary_label": "family",
+      "secondary_labels": [],
+      "confidence": "medium"
+    },
+    "Little India SG": {
+      "densities": {
+        "adventure": 0.0,
+        "relaxation": 0.0,
+        "culture": 0.84,
+        "budget": 0.1,
+        "luxury": 0.0,
+        "family": 0.0
+      },
+      "primary_label": "culture",
+      "secondary_labels": [],
+      "confidence": "medium"
+    },
+    "Clarke Quay SG": {
+      "densities": {
+        "adventure": 0.0,
+        "relaxation": 0.0,
+        "culture": 0.06,
+        "budget": 0.52,
+        "luxury": 0.0,
+        "family": 0.0
+      },
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "medium"
+    },
+    "Chinatown SG": {
+      "densities": {
+        "adventure": 0.0,
+        "relaxation": 0.0,
+        "culture": 0.84,
+        "budget": 0.1,
+        "luxury": 0.0,
+        "family": 0.0
+      },
+      "primary_label": "culture",
+      "secondary_labels": [],
+      "confidence": "medium"
+    },
+    "Kuala Lumpur": {
+      "densities": {
+        "adventure": 0.075,
+        "relaxation": 0.125,
+        "culture": 0.6,
+        "budget": 0.1,
+        "luxury": 0.15,
+        "family": 0.3
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "family",
+        "luxury"
+      ],
+      "confidence": "low"
+    },
+    "Penang": {
+      "densities": {
+        "adventure": 0.175,
+        "relaxation": 0.15,
+        "culture": 0.525,
+        "budget": 0.025,
+        "luxury": 0.15,
+        "family": 0.15
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "adventure",
+        "relaxation"
+      ],
+      "confidence": "low"
+    },
+    "Langkawi": {
+      "densities": {
+        "adventure": 0.65,
+        "relaxation": 1.575,
+        "culture": 0.45,
+        "budget": 0.425,
+        "luxury": 0.325,
+        "family": 0.725
+      },
+      "primary_label": "relaxation",
+      "secondary_labels": [
+        "family",
+        "adventure"
+      ],
+      "confidence": "low"
+    },
+    "Kota Kinabalu": {
+      "densities": {
+        "adventure": 0.875,
+        "relaxation": 0.375,
+        "culture": 0.875,
+        "budget": 0.025,
+        "luxury": 0.05,
+        "family": 1.25
+      },
+      "primary_label": "family",
+      "secondary_labels": [
+        "adventure",
+        "culture"
+      ],
+      "confidence": "low"
+    },
+    "Cameron Highlands": {
+      "densities": {
+        "adventure": 0.7,
+        "relaxation": 0.275,
+        "culture": 0.275,
+        "budget": 0.05,
+        "luxury": 0.025,
+        "family": 0.25
+      },
+      "primary_label": "adventure",
+      "secondary_labels": [
+        "relaxation",
+        "culture"
+      ],
+      "confidence": "low"
+    },
+    "Malacca": {
+      "densities": {
+        "adventure": 0.025,
+        "relaxation": 0.075,
+        "culture": 1.925,
+        "budget": 0.175,
+        "luxury": 0.05,
+        "family": 0.275
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "family",
+        "budget"
+      ],
+      "confidence": "low"
+    },
+    "Perhentian Islands": {
+      "densities": {
+        "adventure": 0.725,
+        "relaxation": 1.6,
+        "culture": 0.05,
+        "budget": 0.225,
+        "luxury": 0.25,
+        "family": 0.3
+      },
+      "primary_label": "relaxation",
+      "secondary_labels": [
+        "adventure",
+        "family"
+      ],
+      "confidence": "low"
+    },
+    "Tioman Island": {
+      "densities": {
+        "adventure": 0.775,
+        "relaxation": 0.35,
+        "culture": 0.1,
+        "budget": 0.25,
+        "luxury": 0.05,
+        "family": 0.175
+      },
+      "primary_label": "adventure",
+      "secondary_labels": [
+        "relaxation",
+        "budget"
+      ],
+      "confidence": "low"
+    },
+    "Taman Negara": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Ipoh": {
+      "densities": {
+        "adventure": 0.3,
+        "relaxation": 0.175,
+        "culture": 0.75,
+        "budget": 0.075,
+        "luxury": 0.0,
+        "family": 0.475
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "family",
+        "adventure"
+      ],
+      "confidence": "low"
+    },
+    "Yangon": {
+      "densities": {
+        "adventure": 0.025,
+        "relaxation": 0.075,
+        "culture": 2.65,
+        "budget": 0.275,
+        "luxury": 0.1,
+        "family": 0.85
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "family",
+        "budget"
+      ],
+      "confidence": "low"
+    },
+    "Bagan": {
+      "densities": {
+        "adventure": 0.2564102564102564,
+        "relaxation": 0.6923076923076923,
+        "culture": 3.641025641025641,
+        "budget": 0.358974358974359,
+        "luxury": 0.15384615384615385,
+        "family": 0.28205128205128205
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "relaxation",
+        "budget"
+      ],
+      "confidence": "low"
+    },
+    "Mandalay": {
+      "densities": {
+        "adventure": 0.17647058823529413,
+        "relaxation": 0.6176470588235294,
+        "culture": 1.7352941176470589,
+        "budget": 0.47058823529411764,
+        "luxury": 0.14705882352941177,
+        "family": 0.20588235294117646
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "relaxation",
+        "budget"
+      ],
+      "confidence": "low"
+    },
+    "Inle Lake": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Ngapali": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Hsipaw": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Hpa An": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Mrauk U": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Luang Prabang": {
+      "densities": {
+        "adventure": 0.2,
+        "relaxation": 0.275,
+        "culture": 1.325,
+        "budget": 0.325,
+        "luxury": 0.25,
+        "family": 0.75
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "family",
+        "budget"
+      ],
+      "confidence": "low"
+    },
+    "Vang Vieng": {
+      "densities": {
+        "adventure": 0.7,
+        "relaxation": 0.5,
+        "culture": 0.1,
+        "budget": 0.5666666666666667,
+        "luxury": 0.2,
+        "family": 0.5666666666666667
+      },
+      "primary_label": "adventure",
+      "secondary_labels": [
+        "budget",
+        "family"
+      ],
+      "confidence": "low"
+    },
+    "Vientiane": {
+      "densities": {
+        "adventure": 0.1,
+        "relaxation": 0.35,
+        "culture": 1.075,
+        "budget": 0.175,
+        "luxury": 0.05,
+        "family": 0.375
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "family",
+        "relaxation"
+      ],
+      "confidence": "low"
+    },
+    "4000 Islands": {
+      "densities": {
+        "adventure": 0.0,
+        "relaxation": 0.6,
+        "culture": 0.06,
+        "budget": 0.2,
+        "luxury": 0.0,
+        "family": 0.0
+      },
+      "primary_label": "relaxation",
+      "secondary_labels": [
+        "budget"
+      ],
+      "confidence": "medium"
+    },
+    "Nong Khiaw": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Plain of Jars": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Luang Namtha": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Pakse": {
+      "densities": {
+        "adventure": 0.25,
+        "relaxation": 0.05,
+        "culture": 0.4,
+        "budget": 0.175,
+        "luxury": 0.125,
+        "family": 0.05
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "adventure",
+        "budget"
+      ],
+      "confidence": "low"
+    },
+    "Paro": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Thimphu": {
+      "densities": {
+        "adventure": 0.025,
+        "relaxation": 0.3,
+        "culture": 0.8,
+        "budget": 0.075,
+        "luxury": 0.2,
+        "family": 0.25
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "relaxation",
+        "family"
+      ],
+      "confidence": "low"
+    },
+    "Punakha": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Colombo": {
+      "densities": {
+        "adventure": 0.0,
+        "relaxation": 0.1,
+        "culture": 1.225,
+        "budget": 0.125,
+        "luxury": 0.225,
+        "family": 0.3
+      },
+      "primary_label": "culture",
+      "secondary_labels": [
+        "family",
+        "luxury"
+      ],
+      "confidence": "low"
+    },
+    "Galle": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    },
+    "Sigiriya": {
+      "densities": {},
+      "primary_label": "budget",
+      "secondary_labels": [],
+      "confidence": "low"
+    }
+  },
+  "validation_errors": [
+    {
+      "destination": "Manado",
+      "errors": [
+        "safety_score=0 out of range [1, 10]"
+      ]
+    },
+    {
+      "destination": "Hokkaido",
+      "errors": [
+        "safety_score=0 out of range [1, 10]"
+      ]
+    },
+    {
+      "destination": "Kuala Lumpur",
+      "errors": [
+        "safety_score=0 out of range [1, 10]"
+      ]
+    }
+  ]
+}

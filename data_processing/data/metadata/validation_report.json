@@ -1,0 +1,45 @@
+{
+  "total_input": 147,
+  "valid": 147,
+  "invalid": 0,
+  "ml_export_path": "C:\\Users\\LEGION\\Desktop\\AIE\\Assignments\\Week4\\Code\\where-to-go\\ml\\data\\raw\\destinations.csv",
+  "schema_errors": [],
+  "coverage": {
+    "travel_styles": {
+      "culture": 59,
+      "relaxation": 30,
+      "adventure": 44,
+      "budget": 7,
+      "family": 3,
+      "luxury": 4
+    },
+    "budget_tiers": {
+      "budget": 78,
+      "mid": 56,
+      "luxury": 13
+    },
+    "climates": {
+      "tropical": 84,
+      "highland": 24,
+      "subtropical": 13,
+      "temperate": 23,
+      "continental": 3
+    },
+    "countries": {
+      "Thailand": 20,
+      "Vietnam": 15,
+      "Indonesia": 19,
+      "Japan": 19,
+      "South Korea": 10,
+      "Nepal": 10,
+      "Philippines": 10,
+      "Cambodia": 8,
+      "Singapore": 5,
+      "Malaysia": 9,
+      "Myanmar": 8,
+      "Laos": 8,
+      "Bhutan": 3,
+      "Sri Lanka": 3
+    }
+  }
+}
